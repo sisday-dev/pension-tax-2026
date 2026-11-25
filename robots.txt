@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sisday-dev.github.io/pension-tax-2026/sitemap.xml

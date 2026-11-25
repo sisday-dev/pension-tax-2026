@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 연금저축·IRP 세액공제 계산기 | 최대 198만 원 환급 + 12월 절세 마감 체크리스트</title>
+  <meta name="description" content="2026년 귀속 소득세법 기준. 총급여 5,500만 원 이하 16.5%·초과 13.2%, 연금저축 600만 원·IRP 합산 900만 원(ISA 만기 전환 시 최대 1,200만 원) 한도로 연말정산 세액공제 환급액과 중도해지 손익을 계산합니다. 12월 31일 마감되는 연금저축·IRP·기부금·월세·ISA·노란우산 절세 체크리스트와 인쇄·PDF 저장까지 무료." />
+  <meta name="keywords" content="연금저축 세액공제, IRP 세액공제, 2026 연말정산, 연금계좌 세액공제 계산기, ISA 만기 전환, IRP 중도해지, 12월 절세, 연말정산 체크리스트, 기부금 세액공제, 고향사랑기부금, 월세 세액공제, 노란우산공제 소득공제, 12월 31일 납입, 연금소득세, 900만원 한도, 600만원 한도" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1257a5" />
+  <link rel="canonical" href="https://sisday-dev.github.io/pension-tax-2026/" />
+
+  <!-- 네이버 서치어드바이저 사이트 소유확인: 등록 후 발급되는 코드를 아래 주석에 넣고 주석을 풉니다.
+  <meta name="naver-site-verification" content="" />
+  -->
+  <!-- 구글 서치 콘솔은 GA4 연동 시 자동 확인되거나, HTML 태그 방식을 쓸 경우 아래에 넣습니다.
+  <meta name="google-site-verification" content="" />
+  -->
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sisday-dev.github.io/pension-tax-2026/" />
+  <meta property="og:title" content="2026 연금저축·IRP 세액공제 계산기 + 12월 절세 마감 체크리스트" />
+  <meta property="og:description" content="연금저축 600만·IRP 합산 900만(ISA 전환 시 1,200만) 한도로 환급액을 계산하고, 12월 31일 마감되는 연금저축·IRP·기부금·월세·ISA·노란우산 체크리스트까지 한 페이지에서 확인하세요." />
+  <meta property="og:locale" content="ko_KR" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231257a5'/%3E%3Ctext x='50' y='72' font-size='46' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3E%EC%97%B0%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Analytics 4 — 도메인 확정 후 측정 ID를 넣고 주석을 해제합니다.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- Google AdSense (게시자 ID: ca-pub-6878215996562815) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6878215996562815" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "2026 연금저축·IRP 세액공제 & 해지 손익 계산기 + 12월 절세 마감 체크리스트",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "ko-KR",
+    "description": "소득세법 제59조의3(연금계좌세액공제) 2026년 기준으로 연금저축 600만원·IRP 합산 900만원(ISA 만기 전환 시 최대 1,200만원) 한도와 16.5%/13.2% 공제율을 적용해 연말정산 세액공제 환급액을 계산하고, 목표 환급액 역산과 연금계좌 중도해지(기타소득세 16.5%) 대비 연금수령(연금소득세 3.3~5.5%) 손익을 비교합니다. 12월 31일까지 마감되는 연금저축·IRP·ISA 전환·기부금·월세·노란우산 절세 체크리스트를 함께 제공하는 무료 도구입니다.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+    "featureList": [
+      "총급여 5,500만원(종합소득금액 4,500만원) 경계로 16.5%·13.2% 공제율 자동 적용",
+      "연금저축 600만원·IRP 합산 900만원·ISA 만기 전환 최대 1,200만원 한도 계산",
+      "목표 추가 환급액 역산(예: 10만원 더 받으려면 얼마 더 넣어야 하나)",
+      "중도해지 기타소득세 16.5% 대비 55세 이후 연금수령 3.3~5.5% 손익 비교",
+      "12월 절세 마감 체크리스트(연금저축·IRP·ISA 전환·기부금·월세·노란우산)",
+      "계산 결과와 체크리스트 인쇄 및 PDF 저장"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "2026년 연금저축·IRP 세액공제 한도는 얼마인가요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "연금저축 단독으로는 연 600만원, 연금저축과 IRP(퇴직연금 DC·IRP 개인 추가납입)를 합치면 연 900만원까지 세액공제 대상입니다. IRP만으로 900만원을 채우는 것도 가능합니다. ISA 만기 자금을 60일 이내에 연금계좌로 옮기면 전환금액의 10%(최대 300만원)가 별도로 더해져 한 해 최대 1,200만원까지 공제 대상이 됩니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "세액공제율 16.5%와 13.2%는 어떻게 나뉘나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "근로소득만 있는 경우 총급여 5,500만원 이하, 그 외 종합소득금액 4,500만원 이하이면 16.5%(소득세 15% + 지방소득세 1.5%)가 적용됩니다. 이를 넘으면 전체 납입액에 13.2%(12% + 1.2%)가 적용되며, 900만원을 채웠을 때 환급액은 148만 5천원과 118만 8천원으로 29만 7천원 차이가 납니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "연금저축에 900만원을 넣으면 전액 공제되나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "아니요. 연금저축 단독 공제 한도는 연 600만원이라 900만원을 넣어도 600만원만 인정됩니다. 남은 300만원까지 공제받으려면 IRP에 넣어야 합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "중도해지하면 세금을 얼마나 내나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "연금수령 요건(만 55세 이후·가입 5년 경과·연금수령한도 이내)을 채우지 못하고 해지하면 세액공제 받은 납입원금과 운용수익에 기타소득세 16.5%(소득세 15% + 지방소득세 1.5%)가 부과됩니다. 세액공제를 받지 않은 납입금은 과세되지 않습니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "IRP는 중도인출이 되나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "IRP는 무주택자의 본인 명의 주택 구입, 전세·임차보증금 마련, 6개월 이상 요양, 파산·개인회생, 재난 피해 같은 법정 사유에만 중도인출이 가능하고 그 외에는 계좌를 해지해야 합니다. 다만 소득세법상 '부득이한 사유'에 들지 않는 주택 구입·전세 인출은 세금이 3.3~5.5%가 아니라 16.5%로 과세됩니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "55세 이후 연금으로 받으면 세금이 얼마인가요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "연금수령 요건을 채우고 연금수령한도 이내로 받으면 연금소득세가 55~69세 5.5%, 70~79세 4.4%, 80세 이상 3.3%(지방소득세 포함)로 낮아집니다. 다만 사적연금 연 수령액이 1,500만원을 넘으면 16.5% 분리과세와 종합과세 중 하나를 골라야 합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "세액공제를 받으면 무조건 환급되나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "세액공제는 그해 결정세액에서 깎아 주는 방식이라, 다른 공제로 이미 낼 세금이 0원이면 계산만큼 환급되지 않습니다. 실제 환급액은 결정세액과 기납부세액에 따라 달라지므로 홈택스 연말정산 미리보기로 확인하는 것이 정확합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "IRP는 왜 주식형 ETF에 100% 투자할 수 없나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "IRP·DC형은 위험자산 투자 한도가 적립금의 70%로 제한되어 나머지 30% 이상은 예금·국채 등 안전자산으로 두어야 합니다. 위험자산 100% 투자를 원하면 연금저축펀드가 유리하지만, 연금저축 단독 공제 한도는 600만원입니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "12월 31일에 넣어도 올해 세액공제를 받을 수 있나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "연금저축·IRP는 12월 31일까지 입금된 금액이 해당 과세기간 납입액으로 인정됩니다. 다만 12월 31일 저녁 이체는 금융사 마감 시간이나 다음 영업일 처리로 넘어갈 수 있어, 12월 30일까지 입금을 마치는 편이 안전합니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "12월에 기부하면 올해 연말정산에 반영되나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "2026년 12월 31일까지 실제로 지급한 기부금이 2026년 귀속 연말정산 대상입니다. 1월에 지급하면 다음 해 귀속으로 넘어갑니다. 기부금 1,000만원 이하분은 15%(지방소득세 포함 16.5%), 초과분은 30% 세액공제되고, 고향사랑기부금은 10만원까지 사실상 전액 공제됩니다." }
+      },
+      {
+        "@type": "Question",
+        "name": "월세 세액공제는 12월에 무엇을 준비해야 하나요?",
+        "acceptedAnswer": { "@type": "Answer", "text": "총급여 8,000만원(종합소득금액 7,000만원) 이하 무주택 세대주·세대원이면 2026년에 낸 월세의 17%(총급여 5,500만원 초과는 15%)를 연 1,000만원 한도로 공제받습니다. 임대차계약서 사본, 월세 이체 내역, 주민등록등본을 준비하고, 계약서 주소와 전입신고 주소가 같은지 확인하세요." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1257a5;
+      --primary-dark: #0b3d75;
+      --primary-light: #e8f1fb;
+      --accent: #f0a500;
+      --accent-light: #fff6e0;
+      --good: #0f7b4f;
+      --good-light: #e6f6ee;
+      --warn: #b23c17;
+      --warn-light: #fdeee7;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --line: #e2e8f2;
+      --text: #16202e;
+      --muted: #667085;
+      --radius: 16px;
+      --shadow: 0 1px 2px rgba(16, 32, 58, .05), 0 10px 28px -18px rgba(16, 32, 58, .35);
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-padding-top: 76px; }
+    [hidden] { display: none !important; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.62;
+      font-size: 16px;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+
+    /* ── 헤더 ── */
+    .site-header {
+      background: linear-gradient(160deg, #0b3d75 0%, #1257a5 55%, #1d6fc4 100%);
+      color: #fff;
+      padding: 34px 0 30px;
+    }
+    .site-header .brand {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: .8rem; font-weight: 700; letter-spacing: .02em;
+      background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28);
+      padding: 5px 11px; border-radius: 999px; margin-bottom: 14px;
+    }
+    .site-header h1 {
+      font-size: clamp(1.5rem, 5.2vw, 2.1rem);
+      line-height: 1.32; margin: 0 0 10px; font-weight: 800; letter-spacing: -.02em;
+    }
+    .site-header .lead { margin: 0 0 16px; color: #dbe9f9; font-size: .95rem; max-width: 46em; }
+    .hook {
+      display: inline-block; background: var(--accent); color: #2b1d00;
+      font-weight: 800; font-size: .95rem; padding: 8px 14px; border-radius: 10px;
+    }
+    .header-facts { display: flex; flex-wrap: wrap; gap: 6px 8px; margin-top: 16px; }
+    .header-facts span {
+      font-size: .78rem; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22);
+      padding: 4px 10px; border-radius: 8px; color: #eaf3ff;
+    }
+
+    /* ── 탭 ── */
+    .tabs {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(244, 247, 251, .94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      padding: 8px 0;
+    }
+    .tabs .wrap { display: flex; gap: 8px; }
+    .tab {
+      flex: 1; min-height: 48px; border: 1px solid var(--line); background: #fff;
+      border-radius: 12px; font-size: .84rem; font-weight: 700; color: var(--muted);
+      cursor: pointer; padding: 9px 5px; font-family: inherit; line-height: 1.28;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+    .tab[aria-selected="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .tab:focus-visible { outline: 3px solid rgba(18,87,165,.35); outline-offset: 2px; }
+
+    main { padding: 20px 0 8px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 22px 20px; margin: 0 0 18px;
+    }
+    .card > h2 { font-size: 1.06rem; margin: 0 0 4px; font-weight: 800; letter-spacing: -.01em; }
+    .card > .sub { color: var(--muted); font-size: .85rem; margin: 0 0 18px; }
+
+    /* ── 입력 ── */
+    .field { margin: 0 0 18px; }
+    .field:last-child { margin-bottom: 0; }
+    .field > label, .field-label {
+      display: block; font-weight: 700; font-size: .9rem; margin-bottom: 6px;
+    }
+    .field .hint { font-size: .78rem; color: var(--muted); margin-top: 6px; }
+    .input-wrap { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 12px; background: #fbfcfe; overflow: hidden; }
+    .input-wrap:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(18,87,165,.12); }
+    .input-wrap input {
+      flex: 1; min-width: 0; border: 0; background: transparent; padding: 13px 14px;
+      font-size: 1.08rem; font-weight: 700; font-family: inherit; color: var(--text);
+      text-align: right; letter-spacing: .01em;
+    }
+    .input-wrap input:focus { outline: none; }
+    .input-wrap .unit { padding: 0 14px 0 4px; color: var(--muted); font-size: .85rem; font-weight: 700; }
+    .input-wrap input::placeholder { color: #b3bccb; font-weight: 500; }
+
+    .radio-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .radio-row label {
+      flex: 1 1 0; min-width: 150px; display: flex; align-items: center; gap: 8px;
+      border: 1px solid var(--line); border-radius: 12px; padding: 12px 13px;
+      font-size: .88rem; font-weight: 700; cursor: pointer; background: #fbfcfe; min-height: 48px;
+    }
+    .radio-row input { accent-color: var(--primary); width: 18px; height: 18px; flex: none; }
+    .radio-row label:has(input:checked) { border-color: var(--primary); background: var(--primary-light); color: var(--primary-dark); }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+    .chip {
+      border: 1px solid var(--line); background: #fff; color: var(--muted); border-radius: 999px;
+      padding: 7px 12px; font-size: .8rem; font-weight: 700; cursor: pointer; font-family: inherit;
+      min-height: 36px;
+    }
+    .chip:hover { border-color: var(--primary); color: var(--primary); }
+    .chip:focus-visible { outline: 3px solid rgba(18,87,165,.3); outline-offset: 1px; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px; font-size: .78rem; font-weight: 700;
+      border-radius: 8px; padding: 4px 9px; margin-top: 8px;
+    }
+    .badge.ok { background: var(--good-light); color: var(--good); }
+    .badge.near { background: var(--accent-light); color: #8a5b00; }
+    .badge.over { background: var(--warn-light); color: var(--warn); }
+
+    details.extra {
+      border: 1px dashed var(--line); border-radius: 12px; padding: 0; background: #fbfcfe;
+      margin-top: 4px;
+    }
+    details.extra > summary {
+      cursor: pointer; padding: 12px 14px; font-weight: 700; font-size: .88rem; list-style: none;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 48px;
+    }
+    details.extra > summary::-webkit-details-marker { display: none; }
+    details.extra > summary::after { content: "＋"; color: var(--muted); font-weight: 700; }
+    details.extra[open] > summary::after { content: "－"; }
+    details.extra .inner { padding: 2px 14px 16px; border-top: 1px solid var(--line); }
+
+    .checkline { display: flex; align-items: center; gap: 9px; font-size: .85rem; font-weight: 600; margin-top: 10px; }
+    .checkline input { width: 18px; height: 18px; accent-color: var(--primary); }
+
+    /* ── 결과 ── */
+    .result-card { border: 1.5px solid #cfe0f4; background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%); }
+    .result-label { font-size: .82rem; font-weight: 700; color: var(--muted); letter-spacing: .02em; }
+    .big-number {
+      font-size: clamp(2.1rem, 9vw, 3rem); font-weight: 800; color: var(--primary-dark);
+      line-height: 1.15; letter-spacing: -.02em; margin: 2px 0 2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .big-number small { font-size: .42em; font-weight: 700; color: var(--muted); margin-left: 5px; }
+    .result-sub { color: var(--muted); font-size: .87rem; margin: 0 0 16px; }
+    .result-sub strong { color: var(--text); }
+
+    .kv { border-top: 1px solid var(--line); margin-top: 4px; }
+    .kv-row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #eef2f8; font-size: .9rem; }
+    .kv-row:last-child { border-bottom: 0; }
+    .kv-row .k { color: var(--muted); }
+    .kv-row .v { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+    .kv-row.total .k { color: var(--text); font-weight: 700; }
+    .kv-row.total .v { color: var(--primary-dark); font-size: 1.02rem; }
+
+    .bars { margin-top: 14px; }
+    .bar-item { margin-bottom: 11px; }
+    .bar-head { display: flex; justify-content: space-between; font-size: .79rem; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+    .bar-track { height: 9px; background: #e9eef6; border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--primary); border-radius: 999px; transition: width .25s ease; }
+    .bar-fill.accent { background: var(--accent); }
+    .bar-fill.full { background: var(--good); }
+
+    .notice {
+      border-radius: 12px; padding: 12px 14px; font-size: .85rem; margin-top: 14px;
+      background: var(--accent-light); color: #6b4600; border: 1px solid #f6dfa8;
+    }
+    .notice.info { background: var(--primary-light); color: var(--primary-dark); border-color: #cfe0f4; }
+    .notice.warn { background: var(--warn-light); color: var(--warn); border-color: #f6d3c6; }
+    .notice strong { font-weight: 800; }
+
+    .reverse-out { margin-top: 14px; padding: 14px; border-radius: 12px; background: var(--good-light); border: 1px solid #c6e9d7; }
+    .reverse-out.warn { background: var(--warn-light); border-color: #f6d3c6; }
+    .reverse-out .line { font-size: .93rem; margin: 0 0 6px; }
+    .reverse-out .line:last-child { margin-bottom: 0; }
+    .reverse-out strong { color: var(--good); }
+    .reverse-out.warn strong { color: var(--warn); }
+
+    /* ── 해지 비교 ── */
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px; }
+    @media (max-width: 560px) { .compare { grid-template-columns: 1fr; } }
+    .compare-box { border: 1px solid var(--line); border-radius: 14px; padding: 15px; background: #fbfcfe; }
+    .compare-box.now { border-color: #f3c6b6; background: #fffaf8; }
+    .compare-box.later { border-color: #bfe3d0; background: #f8fdfa; }
+    .compare-box h3 { font-size: .88rem; margin: 0 0 10px; font-weight: 800; }
+    .compare-box.now h3 { color: var(--warn); }
+    .compare-box.later h3 { color: var(--good); }
+    .compare-box .amount { font-size: 1.4rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+    .compare-box.now .amount { color: var(--warn); }
+    .compare-box.later .amount { color: var(--good); }
+    .compare-box .cap { font-size: .76rem; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+    .compare-box ul { margin: 0; padding-left: 16px; font-size: .82rem; color: var(--muted); }
+    .compare-box li { margin-bottom: 3px; }
+    .verdict { margin-top: 14px; padding: 15px; border-radius: 12px; background: var(--primary-light); border: 1px solid #cfe0f4; font-size: .92rem; }
+    .verdict strong { color: var(--primary-dark); font-size: 1.02rem; }
+
+    /* ── 표 ── */
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 6px -4px 0; padding: 0 4px; }
+    table.guide { width: 100%; border-collapse: collapse; font-size: .84rem; min-width: 560px; }
+    table.guide th, table.guide td { border-bottom: 1px solid var(--line); padding: 10px 9px; text-align: left; vertical-align: top; }
+    table.guide thead th { background: var(--primary-light); color: var(--primary-dark); font-size: .8rem; font-weight: 800; border-bottom: 1px solid #cfe0f4; }
+    table.guide tbody th { font-weight: 700; color: var(--text); background: #fbfcfe; white-space: nowrap; }
+    table.guide td strong { color: var(--primary-dark); }
+    .table-note { font-size: .76rem; color: var(--muted); margin-top: 10px; }
+
+    /* ── 리스트/FAQ ── */
+    .tips { margin: 0; padding: 0; list-style: none; counter-reset: tip; }
+    .tips li { position: relative; padding: 0 0 14px 38px; font-size: .9rem; }
+    .tips li:last-child { padding-bottom: 0; }
+    .tips li::before {
+      counter-increment: tip; content: counter(tip);
+      position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%;
+      background: var(--primary-light); color: var(--primary-dark); font-weight: 800; font-size: .8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .tips li strong { display: block; margin-bottom: 2px; }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq details:last-child { border-bottom: 0; }
+    .faq summary {
+      cursor: pointer; padding: 14px 26px 14px 0; font-weight: 700; font-size: .91rem; position: relative; list-style: none;
+      min-height: 48px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "＋"; position: absolute; right: 2px; top: 13px; color: var(--muted); }
+    .faq details[open] summary::after { content: "－"; }
+    .faq .answer { padding: 0 0 15px; font-size: .88rem; color: #3b4657; }
+
+    .print-bar { margin: 4px 0 20px; }
+    .btn-print {
+      width: 100%; min-height: 54px; border: 0; border-radius: 14px; cursor: pointer;
+      background: var(--primary-dark); color: #fff; font-size: 1rem; font-weight: 800; font-family: inherit;
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      box-shadow: 0 8px 22px -12px rgba(11,61,117,.9);
+    }
+    .btn-print:hover { background: #092f5c; }
+    .btn-print:focus-visible { outline: 3px solid rgba(18,87,165,.4); outline-offset: 2px; }
+    .btn-print svg { width: 20px; height: 20px; }
+    .print-hint { text-align: center; font-size: .78rem; color: var(--muted); margin: 8px 0 0; }
+
+    .source-list { font-size: .8rem; color: var(--muted); margin: 0; padding-left: 18px; }
+    .source-list li { margin-bottom: 4px; }
+    .disclaimer { font-size: .79rem; color: var(--muted); background: #f8fafc; border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+
+    footer.site-footer { padding: 26px 0 40px; border-top: 1px solid var(--line); margin-top: 12px; }
+    footer .links { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center; margin-bottom: 14px; }
+    footer .links a { color: var(--primary); text-decoration: none; font-weight: 700; font-size: .82rem; }
+    footer .links a:hover { text-decoration: underline; }
+    footer .fine { text-align: center; font-size: .76rem; color: var(--muted); margin: 0; }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* ── 12월 절세 마감 체크리스트 ── */
+    .ck-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+    .ck-head .big-number { margin-bottom: 0; }
+    .ck-progress { min-width: 200px; flex: 0 1 260px; padding-top: 4px; }
+    @media (max-width: 560px) { .ck-progress { flex: 1 1 100%; } }
+    .checklist { list-style: none; margin: 0; padding: 0; }
+    .ck-item { border-bottom: 1px solid #eef2f8; padding: 15px 0; }
+    .ck-item:last-child { border-bottom: 0; }
+    .ck-item:first-child { padding-top: 4px; }
+    .ck-top { display: flex; gap: 10px; align-items: flex-start; }
+    .ck-top input { width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--primary); flex: none; }
+    .ck-title { font-weight: 800; font-size: .93rem; }
+    .ck-badge {
+      display: inline-block; font-size: .71rem; font-weight: 800; border-radius: 7px;
+      padding: 3px 8px; background: var(--primary-light); color: var(--primary-dark);
+      margin-left: 6px; vertical-align: 2px; white-space: nowrap;
+    }
+    .ck-badge.hot { background: var(--accent-light); color: #8a5b00; }
+    .ck-desc { font-size: .85rem; color: #3b4657; margin: 5px 0 0 30px; }
+    .ck-effect { font-size: .8rem; color: var(--muted); margin: 5px 0 0 30px; }
+    .ck-effect strong { color: var(--primary-dark); }
+    .ck-links { margin: 7px 0 0 30px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+    .ck-src { font-size: .77rem; color: var(--primary); text-decoration: none; font-weight: 600; }
+    .ck-src:hover { text-decoration: underline; }
+    .ck-gocalc {
+      border: 1px solid var(--line); background: #fff; color: var(--primary-dark); border-radius: 999px;
+      padding: 5px 11px; font-size: .77rem; font-weight: 700; cursor: pointer; font-family: inherit;
+    }
+    .ck-gocalc:hover { border-color: var(--primary); }
+    .ck-item.done .ck-title { color: var(--muted); text-decoration: line-through; }
+    .ck-item.done .ck-desc, .ck-item.done .ck-effect { color: #a7b0be; }
+    .ck-group-note { font-size: .78rem; color: var(--muted); margin: -10px 0 12px; }
+
+    /* ── 인쇄용 리포트 ── */
+    #printReport { display: none; }
+    #printReport h1 { font-size: 16pt; margin: 0 0 3pt; letter-spacing: -.02em; }
+    #printReport .pr-sub { font-size: 8.6pt; color: #555; margin: 0 0 1pt; }
+    #printReport h2 { font-size: 10.5pt; margin: 9pt 0 3pt; padding-bottom: 2pt; border-bottom: 1.2pt solid #1257a5; }
+    #printReport table { width: 100%; border-collapse: collapse; font-size: 8.8pt; }
+    #printReport th, #printReport td { border: .6pt solid #c4cddb; padding: 3pt 6pt; text-align: left; line-height: 1.35; }
+    #printReport th { background: #eef4fb; font-weight: 700; width: 34%; }
+    #printReport td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    #printReport .pr-highlight {
+      border: 1.2pt solid #1257a5; background: #f4f9ff; padding: 6pt 9pt; margin: 5pt 0 0; border-radius: 4pt;
+    }
+    #printReport .pr-highlight .big { font-size: 15pt; font-weight: 800; color: #0b3d75; }
+    #printReport .pr-note { font-size: 7.4pt; color: #555; line-height: 1.45; margin-top: 7pt; }
+    #printReport .pr-foot { margin-top: 8pt; padding-top: 4pt; border-top: .6pt solid #c4cddb; font-size: 7.6pt; color: #666; }
+
+    @page { size: A4; margin: 10mm 10mm; }
+
+    @media print {
+      body { background: #fff; font-size: 10pt; color: #000; }
+      .site-header, .tabs, .site-footer, .no-print, main > *:not(#printReport) { display: none !important; }
+      main { padding: 0; }
+      .wrap { max-width: none; padding: 0; }
+      #printReport { display: block !important; }
+      #printReport * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: #000; text-decoration: none; }
+      h2, table, .pr-highlight { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">연금절세 계산기 · 2026</div>
+    <h1>연금저축·IRP 세액공제,<br />올해 얼마나 돌려받을까?</h1>
+    <p class="lead">2026년 귀속 소득세법 그대로. 연금저축 600만 원·IRP 합산 900만 원(ISA 만기 전환 시 최대 1,200만 원) 한도와 16.5%·13.2% 공제율로 환급액을 계산하고, 중도해지하면 토해내는 16.5%까지 한 화면에서 비교합니다. 12월 31일 전에 챙겨야 할 절세 항목은 ③번 체크리스트에서 확인하세요.</p>
+    <span class="hook">한도 꽉 채우면 최대 198만 원 환급 — 지금 내 숫자로 확인</span>
+    <div class="header-facts">
+      <span>소득세법 §59조의3</span>
+      <span>연금저축 600만 원</span>
+      <span>IRP 합산 900만 원</span>
+      <span>ISA 전환 +300만 원</span>
+      <span>12월 절세 마감 체크</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="계산기 종류">
+  <div class="wrap" role="tablist">
+    <button class="tab" id="tab-credit" role="tab" aria-selected="true" aria-controls="panel-credit">① 세액공제 환급</button>
+    <button class="tab" id="tab-exit" role="tab" aria-selected="false" aria-controls="panel-exit">② 해지 손익</button>
+    <button class="tab" id="tab-check" role="tab" aria-selected="false" aria-controls="panel-check">③ 12월 절세 마감</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- 애드센스: 상단 (승인 후 아래 주석을 풀고 data-ad-slot 을 채웁니다) -->
+  <!--
+  <div class="no-print" style="margin:0 0 18px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6878215996562815" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  -->
+
+  <!-- ══════════ TAB 1 : 세액공제 ══════════ -->
+  <section id="panel-credit" role="tabpanel" aria-labelledby="tab-credit">
+
+    <div class="card">
+      <h2>1. 소득과 납입액 입력</h2>
+      <p class="sub">2026년에 넣은(넣을) 금액 기준입니다. 12월 31일까지 입금된 금액이 그해 공제 대상이에요.</p>
+
+      <div class="field">
+        <span class="field-label" id="incomeTypeLabel">소득 종류</span>
+        <div class="radio-row" role="radiogroup" aria-labelledby="incomeTypeLabel">
+          <label><input type="radio" name="incomeType" value="earned" checked /> 근로소득만 있음</label>
+          <label><input type="radio" name="incomeType" value="total" /> 사업·기타소득도 있음</label>
+        </div>
+        <div class="hint">근로소득만 있으면 <strong>총급여 5,500만 원</strong>, 그 외 소득이 있으면 <strong>종합소득금액 4,500만 원</strong>이 16.5%와 13.2%의 경계입니다.</div>
+      </div>
+
+      <div class="field">
+        <label for="incomeAmount" id="incomeAmountLabel">총급여액</label>
+        <div class="input-wrap">
+          <input id="incomeAmount" type="text" inputmode="numeric" autocomplete="off" placeholder="0" value="50,000,000" aria-describedby="incomeHint" />
+          <span class="unit">원</span>
+        </div>
+        <div class="hint" id="incomeHint">= 5,000만 원</div>
+        <span class="badge ok" id="incomeBadge">16.5% 구간 · 경계까지 500만 원 남음</span>
+      </div>
+
+      <div class="field">
+        <label for="pensionAmount">연금저축 납입액 <span style="color:var(--muted);font-weight:600;font-size:.8rem">(연 600만 원 한도)</span></label>
+        <div class="input-wrap">
+          <input id="pensionAmount" type="text" inputmode="numeric" autocomplete="off" placeholder="0" value="6,000,000" aria-describedby="pensionHint" />
+          <span class="unit">원</span>
+        </div>
+        <div class="hint" id="pensionHint">= 600만 원</div>
+        <div class="chips" data-target="pensionAmount">
+          <button type="button" class="chip" data-val="0">없음</button>
+          <button type="button" class="chip" data-val="3000000">300만</button>
+          <button type="button" class="chip" data-val="6000000">600만(한도)</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="irpAmount">IRP 납입액 <span style="color:var(--muted);font-weight:600;font-size:.8rem">(합산 900만 원 한도)</span></label>
+        <div class="input-wrap">
+          <input id="irpAmount" type="text" inputmode="numeric" autocomplete="off" placeholder="0" value="3,000,000" aria-describedby="irpHint" />
+          <span class="unit">원</span>
+        </div>
+        <div class="hint" id="irpHint">= 300만 원 · DC형·IRP 계좌의 <strong>개인 추가납입분</strong>만 해당(회사 부담금 제외)</div>
+        <div class="chips" data-target="irpAmount">
+          <button type="button" class="chip" data-val="0">없음</button>
+          <button type="button" class="chip" data-val="3000000">300만</button>
+          <button type="button" class="chip" data-val="9000000">900만</button>
+        </div>
+      </div>
+
+      <details class="extra">
+        <summary>ISA 만기 자금을 연금계좌로 옮겼다면 (추가 한도 최대 300만 원)</summary>
+        <div class="inner">
+          <div class="field" style="margin-top:14px;">
+            <label for="isaAmount">ISA 만기 전환금액</label>
+            <div class="input-wrap">
+              <input id="isaAmount" type="text" inputmode="numeric" autocomplete="off" placeholder="0" value="0" aria-describedby="isaHint" />
+              <span class="unit">원</span>
+            </div>
+            <div class="hint" id="isaHint">옮긴 금액의 <strong>10%</strong>(최대 300만 원)가 기본 한도와 <strong>별도로</strong> 더해집니다. 3,000만 원 이상 옮겨야 300만 원을 다 받아요.</div>
+          </div>
+          <div class="field">
+            <span class="field-label">어느 계좌로 옮겼나요?</span>
+            <div class="radio-row">
+              <label><input type="radio" name="isaTarget" value="irp" checked /> IRP</label>
+              <label><input type="radio" name="isaTarget" value="pension" /> 연금저축</label>
+            </div>
+            <div class="hint">IRP로 받으면 기본 한도 900만 원을 전환금으로 채우기 쉽습니다. 연금저축으로 받으면 연금저축 600만 원 한도가 먼저 걸립니다.</div>
+          </div>
+          <label class="checkline"><input type="checkbox" id="isaWithin60" /> 만기일(해지일)부터 60일 이내에 옮겼어요</label>
+        </div>
+      </details>
+    </div>
+
+    <div class="card result-card" id="creditResult">
+      <div class="result-label">2026년 예상 세액공제(환급)액</div>
+      <div class="big-number" id="creditBig" aria-live="polite">1,485,000<small>원</small></div>
+      <p class="result-sub" id="creditSub">공제대상 <strong>900만 원</strong> × <strong>16.5%</strong> · 소득세 1,350,000원 + 지방소득세 135,000원</p>
+
+      <div class="kv">
+        <div class="kv-row"><span class="k">연금저축 인정액</span><span class="v" id="outPension">4,000,000원</span></div>
+        <div class="kv-row"><span class="k">IRP 인정액</span><span class="v" id="outIrp">3,000,000원</span></div>
+        <div class="kv-row" id="outIsaRow" hidden><span class="k">ISA 전환금 (추가 한도)</span><span class="v" id="outIsa">0원</span></div>
+        <div class="kv-row total"><span class="k">세액공제 대상 납입액</span><span class="v" id="outEligible">9,000,000원</span></div>
+        <div class="kv-row"><span class="k">남은 공제 한도</span><span class="v" id="outRoom">0원</span></div>
+      </div>
+
+      <div class="bars">
+        <div class="bar-item">
+          <div class="bar-head"><span>연금저축 600만 원</span><span id="barPensionText">600만 / 600만</span></div>
+          <div class="bar-track"><div class="bar-fill" id="barPension" style="width:100%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-head"><span>연금저축+IRP 합산 900만 원</span><span id="barBaseText">900만 / 900만</span></div>
+          <div class="bar-track"><div class="bar-fill" id="barBase" style="width:100%"></div></div>
+        </div>
+        <div class="bar-item" id="barIsaWrap" hidden>
+          <div class="bar-head"><span>ISA 전환 추가 한도 300만 원</span><span id="barIsaText">0만 / 300만</span></div>
+          <div class="bar-track"><div class="bar-fill accent" id="barIsa" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <div class="notice" id="creditNotice" hidden></div>
+    </div>
+
+    <div class="card">
+      <h2>2. “몇만 원 더 받으려면 얼마 넣어야 하지?”</h2>
+      <p class="sub">목표 금액을 넣으면 필요한 추가 납입액과 넣을 곳을 바로 계산합니다.</p>
+      <div class="field">
+        <label for="targetExtra">더 환급받고 싶은 금액</label>
+        <div class="input-wrap">
+          <input id="targetExtra" type="text" inputmode="numeric" autocomplete="off" value="100,000" />
+          <span class="unit">원</span>
+        </div>
+        <div class="chips" data-target="targetExtra">
+          <button type="button" class="chip" data-val="100000">10만</button>
+          <button type="button" class="chip" data-val="300000">30만</button>
+          <button type="button" class="chip" data-val="500000">50만</button>
+          <button type="button" class="chip" data-val="1000000">100만</button>
+        </div>
+      </div>
+      <div class="reverse-out" id="reverseOut" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <h2>3. 연금저축 vs IRP vs 일반 연금보험</h2>
+      <p class="sub">세액공제만 보고 고르면 중도인출에서 막힙니다. 계좌의 성격이 다릅니다.</p>
+      <div class="table-scroll">
+        <table class="guide">
+          <thead>
+            <tr>
+              <th scope="col">구분</th>
+              <th scope="col">연금저축</th>
+              <th scope="col">IRP (개인형 퇴직연금)</th>
+              <th scope="col">일반 연금보험<br />(세제비적격)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">세액공제</th>
+              <td><strong>16.5% / 13.2%</strong></td>
+              <td><strong>16.5% / 13.2%</strong></td>
+              <td>없음</td>
+            </tr>
+            <tr>
+              <th scope="row">공제 한도</th>
+              <td>단독 연 600만 원</td>
+              <td>합산 연 900만 원<br />(IRP만으로 900만 원 가능)</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <th scope="row">위험자산 투자</th>
+              <td>제한 없음 (100% 가능)</td>
+              <td>적립금의 70%까지<br />(안전자산 30% 의무)</td>
+              <td>상품별</td>
+            </tr>
+            <tr>
+              <th scope="row">중도인출</th>
+              <td>비교적 자유<br />(세금 발생 가능)</td>
+              <td><strong>법정 사유만</strong><br />(무주택 주택구입·전세, 6개월 이상 요양, 파산·개인회생, 재난 등)</td>
+              <td>해지 가능<br />(해지차익 과세)</td>
+            </tr>
+            <tr>
+              <th scope="row">연금수령 과세</th>
+              <td>3.3~5.5%</td>
+              <td>3.3~5.5% (퇴직금 재원은 퇴직소득세 70%)</td>
+              <td>3.3~5.5%</td>
+            </tr>
+            <tr>
+              <th scope="row">중도해지 과세</th>
+              <td>16.5% 기타소득세</td>
+              <td>16.5% 기타소득세<br />(퇴직금 재원은 퇴직소득세 별도)</td>
+              <td>해지차익에 과세</td>
+            </tr>
+            <tr>
+              <th scope="row">비용</th>
+              <td>상품별 수수료</td>
+              <td>계좌관리 수수료(평균 연 0.2~0.5%,<br />비대면 면제·인하 다수)</td>
+              <td>보험 사업비</td>
+            </tr>
+            <tr>
+              <th scope="row">이런 사람에게</th>
+              <td>투자 자유도·인출 유연성 중시</td>
+              <td>한도 900만 원까지 채우고<br />노후까지 묶어둘 수 있는 사람</td>
+              <td>세액공제 한도를 이미 채웠거나<br />공제 없이도 노후자금을 만들 사람</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">※ 일반 연금보험(세제비적격)은 세액공제가 없는 대신 납입 단계에서 세금이 붙지 않고, 해지·수령 시점에 과세됩니다. 해지차익의 정확한 세율·과세방식은 가입시기·상품별로 다르므로 금융회사에 확인하세요. IRP·DC형의 위험자산 한도는 근로자퇴직급여 보장법 시행규칙 제10조, 연금소득세율은 소득세법 제20조의3·시행령 제40조의2 기준입니다.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ TAB 2 : 해지 손익 ══════════ -->
+  <section id="panel-exit" role="tabpanel" aria-labelledby="tab-exit" hidden>
+
+    <div class="card">
+      <h2>1. 계좌 상태 입력</h2>
+      <p class="sub">금융사 앱의 ‘납입원금’과 ‘평가금액’을 보면 채울 수 있습니다. 모르면 비슷하게 넣어도 방향은 같습니다.</p>
+
+      <div class="field">
+        <label for="exitPrincipal">세액공제 받은 납입원금</label>
+        <div class="input-wrap">
+          <input id="exitPrincipal" type="text" inputmode="numeric" autocomplete="off" value="18,000,000" aria-describedby="exitPrincipalHint" />
+          <span class="unit">원</span>
+        </div>
+        <div class="hint" id="exitPrincipalHint">연말정산에서 공제받은 금액의 누계. 홈택스 ‘연금보험료 등 소득·세액공제 확인서’에서 확인할 수 있어요.</div>
+      </div>
+
+      <div class="field">
+        <label for="exitProfit">운용수익 <span style="color:var(--muted);font-weight:600;font-size:.8rem">(손실이면 마이너스)</span></label>
+        <div class="input-wrap">
+          <input id="exitProfit" type="text" inputmode="numeric" autocomplete="off" value="4,000,000" aria-describedby="exitProfitHint" />
+          <span class="unit">원</span>
+        </div>
+        <div class="hint" id="exitProfitHint">평가금액 − 납입원금. 손실이면 <strong>-</strong>를 붙여 입력하세요.</div>
+      </div>
+
+      <div class="field">
+        <label for="exitNonDeduct">세액공제 받지 않은 납입금 <span style="color:var(--muted);font-weight:600;font-size:.8rem">(선택)</span></label>
+        <div class="input-wrap">
+          <input id="exitNonDeduct" type="text" inputmode="numeric" autocomplete="off" value="0" />
+          <span class="unit">원</span>
+        </div>
+        <div class="hint">한도를 넘겨 넣었거나 공제를 포기한 금액. 이 원금은 꺼낼 때 과세되지 않습니다.</div>
+      </div>
+
+      <div class="field">
+        <label for="exitReceived">지금까지 받은 세액공제 누계</label>
+        <div class="input-wrap">
+          <input id="exitReceived" type="text" inputmode="numeric" autocomplete="off" value="2,970,000" />
+          <span class="unit">원</span>
+        </div>
+        <div class="hint">
+          <label class="checkline" style="margin-top:6px;"><input type="checkbox" id="autoReceived" checked /> 공제받은 원금 × 공제율로 자동 계산</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="exitAge">연금을 받을 나이</label>
+        <div class="input-wrap" style="padding:0 6px;">
+          <select id="exitAge" style="flex:1;border:0;background:transparent;padding:13px 8px;font-size:1rem;font-weight:700;font-family:inherit;color:var(--text);">
+            <option value="0.055" selected>만 55~69세 · 연금소득세 5.5%</option>
+            <option value="0.044">만 70~79세 · 연금소득세 4.4%</option>
+            <option value="0.033">만 80세 이상 · 연금소득세 3.3%</option>
+          </select>
+        </div>
+      </div>
+
+      <label class="checkline"><input type="checkbox" id="exitSplit" checked /> 연 1,500만 원 이하로 나눠 받을 계획 (분리과세 3.3~5.5%)</label>
+      <div class="hint" style="margin-top:6px;">체크를 풀면 한 번에 받는 경우로 계산합니다. 사적연금 연 1,500만 원 초과분은 16.5% 분리과세 또는 종합과세 대상이에요.</div>
+    </div>
+
+    <div class="card result-card" id="exitResult">
+      <div class="result-label">지금 해지할 때</div>
+      <div class="big-number" id="exitBig" aria-live="polite">18,370,000<small>원</small></div>
+      <p class="result-sub" id="exitSub">평가액 2,200만 원에서 기타소득세 <strong>363만 원</strong>을 떼고 받는 금액</p>
+
+      <div class="compare">
+        <div class="compare-box now">
+          <h3>지금 해지 (연금외수령)</h3>
+          <div class="cap">기타소득세 16.5%</div>
+          <div class="amount" id="nowNet">18,370,000원</div>
+          <ul>
+            <li>세금 <span id="nowTax">3,630,000원</span></li>
+            <li>과세대상 <span id="nowBase">22,000,000원</span></li>
+          </ul>
+        </div>
+        <div class="compare-box later">
+          <h3 id="laterTitle">55세 이후 연금수령</h3>
+          <div class="cap" id="laterCap">연금소득세 5.5% · 요건 충족 가정</div>
+          <div class="amount" id="laterNet">20,790,000원</div>
+          <ul>
+            <li>세금 <span id="laterTax">1,210,000원</span></li>
+            <li>과세대상 <span id="laterBase">22,000,000원</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="verdict" id="exitVerdict">
+        지금 해지하면 연금으로 받을 때보다 <strong>242만 원</strong>을 더 냅니다.
+      </div>
+
+      <div class="kv" style="margin-top:14px;">
+        <div class="kv-row"><span class="k">받은 세액공제 누계</span><span class="v" id="outReceived">2,970,000원</span></div>
+        <div class="kv-row"><span class="k">지금 해지 시 총손익 (공제 − 해지세)</span><span class="v" id="outTotalNow">-660,000원</span></div>
+        <div class="kv-row"><span class="k">연금수령 시 총손익 (공제 − 연금세)</span><span class="v" id="outTotalLater">1,760,000원</span></div>
+        <div class="kv-row total"><span class="k">연금수령 시 아끼는 세금(절세액)</span><span class="v" id="outDiff">2,420,000원</span></div>
+      </div>
+
+      <div class="notice info" id="exitNotice" hidden></div>
+    </div>
+
+    <div class="card">
+      <h2>2. 왜 16.5%인가요?</h2>
+      <p class="sub">받은 혜택을 돌려주는 구조입니다.</p>
+      <p style="font-size:.9rem;margin:0 0 10px;">연금계좌에 넣은 돈은 그해 세금을 깎아 주는 대신, <strong>만 55세 이후·가입 5년 경과·연금수령한도 이내</strong>의 ‘연금수령’ 요건을 채워 꺼내야 연금소득세 3.3~5.5%만 냅니다. 이 요건을 벗어나 해지하거나 한도를 넘겨 인출하면 <strong>연금외수령</strong>이 되어 세액공제 받은 원금과 운용수익 전액에 기타소득세 16.5%가 붙습니다.</p>
+      <p style="font-size:.9rem;margin:0 0 10px;">운용손실이 나 평가액이 원금보다 적으면, 손실은 <strong>과세대상(공제받은 원금·운용수익)에서 먼저</strong> 차감됩니다(소득세법 시행령 제40조의3 제5항). 반토막 난 계좌는 세금도 그만큼 줄어요. 다만 손실은 손실대로 남습니다.</p>
+      <p style="font-size:.9rem;margin:0 0 10px;">즉 해지 세금은 ‘벌금’이 아니라 <strong>미리 받은 공제의 정산</strong>입니다. 그래서 오래 굴려 수익이 커질수록 토해낼 세금도 커집니다. 세액공제 148만 5천원을 받고 10년 뒤 2,000만 원이 된 계좌를 깨면 세금 330만 원이 나와, 받은 혜택보다 더 내는 경우도 생깁니다.</p>
+      <div class="notice warn" style="margin-top:4px;">
+        <strong>부득이한 사유</strong>는 예외입니다. 천재지변, 3개월 이상 요양, 파산·개인회생, 사망·해외이주 등 소득세법상 사유에 해당하면 해지해도 연금소득세 3.3~5.5%가 적용됩니다. 사유가 확인된 날부터 6개월 안에 증빙을 금융사에 내야 해요.
+      </div>
+      <div class="notice" style="margin-top:10px;">
+        IRP의 법정 중도인출 사유(무주택자 주택 구입·전세자금 등)와 세법상 ‘부득이한 사유’는 다릅니다. IRP에서 주택 구입 자금을 빼면 인출은 되지만 <strong>세금은 16.5%</strong>로 과세될 수 있습니다.
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TAB 3 : 12월 절세 마감 체크리스트 (13호 통합) ══════════ -->
+  <section id="panel-check" role="tabpanel" aria-labelledby="tab-check" hidden>
+
+    <div class="card">
+      <div class="ck-head">
+        <div>
+          <div class="result-label">올해 세액공제 마감까지</div>
+          <div class="big-number" id="taxDday" aria-live="polite">D-36</div>
+          <p class="result-sub" id="taxDdaySub">2026-12-31 · 체크 0 / 11</p>
+        </div>
+        <div class="ck-progress progress">
+          <div class="bar-head"><span>체크한 항목</span><span id="ckCount">0 / 11</span></div>
+          <div class="bar-track"><div class="bar-fill" id="ckBar"></div></div>
+        </div>
+      </div>
+      <div class="notice info" id="taxNotice">
+        <strong>12월 31일 입금분까지 올해 귀속</strong>입니다. 다만 31일 저녁 이체는 금융사 마감·다음 영업일 처리로 넘어갈 수 있으니 <strong>12월 30일까지</strong> 끝내는 게 안전합니다.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>① 12월 31일까지 — 올해 세액공제 확정</h2>
+      <p class="sub">12월에 해야만 하는 것만 모았습니다. 체크 상태는 이 브라우저에 저장됩니다.</p>
+      <ul class="checklist" id="ckListA"></ul>
+    </div>
+
+    <div class="card">
+      <h2>② 1월 초 — 증빙과 제출 준비</h2>
+      <p class="sub">12월에 못 챙긴 서류는 1월에 보완합니다. 회사 제출 기한은 보통 1월 중입니다.</p>
+      <ul class="checklist" id="ckListB"></ul>
+    </div>
+
+    <div class="card">
+      <h2>한눈에 보는 12월 절세 달력</h2>
+      <p class="sub">마감과 한도, 놓쳤을 때 생기는 일을 함께 정리했습니다.</p>
+      <div class="table-scroll">
+        <table class="guide">
+          <caption class="sr-only">12월 절세 마감 항목별 한도와 혜택</caption>
+          <thead>
+            <tr><th scope="col">항목</th><th scope="col">마감</th><th scope="col">한도·혜택</th><th scope="col">놓치면</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">연금저축·IRP</th><td>12/31 입금</td><td>연금저축 600만·합산 900만(ISA 전환 시 1,200만), 16.5%/13.2%</td><td>그해 공제 기회가 사라지고 1년 미뤄짐</td></tr>
+            <tr><th scope="row">ISA 만기 전환</th><td>만기 후 60일 이내</td><td>전환액의 10%, 최대 300만 원 추가 한도</td><td>추가 한도 소멸(다음 해로 못 넘김)</td></tr>
+            <tr><th scope="row">노란우산공제</th><td>12/31 납입</td><td>소득공제 연 200만~600만 원(사업소득 구간별)</td><td>해당 연도 소득공제 불가</td></tr>
+            <tr><th scope="row">기부금</th><td>12/31 지급</td><td>1,000만 원 이하 15%(지방세 포함 16.5%), 초과 30%</td><td>1월 기부는 다음 해 귀속</td></tr>
+            <tr><th scope="row">월세 세액공제</th><td>12월분 납부·증빙</td><td>월세 1,000만 원 한도, 17%(총급여 5,500만 이하)/15%</td><td>이체 증빙이 없으면 공제 불가</td></tr>
+            <tr><th scope="row">연말정산 미리보기</th><td>11월 중순부터</td><td>예상 환급·추납 확인</td><td>12월에 조정할 기회를 놓침</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">※ 2026년 귀속 기준. 노란우산은 사업소득자·법인대표(총급여 8,000만 원 이하) 대상입니다. 2026년 7월부터 분기 납입한도가 폐지되어 연 1,800만 원까지 납입할 수 있습니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>왜 12월이 마지막인가요?</h2>
+      <p style="font-size:.9rem;margin:0 0 10px;">세액공제·소득공제는 <strong>해당 과세기간(1월 1일~12월 31일)에 실제로 납입·지급한 금액</strong>을 기준으로 계산합니다. 1월 1일이 지나면 그 금액은 다음 해 귀속으로 넘어가, 올해 세금을 줄이는 데 쓸 수 없습니다.</p>
+      <p style="font-size:.9rem;margin:0 0 10px;">특히 연금계좌는 12월 말에 몰아 넣는 경우가 많은데, 금융사 앱 이체 마감 시간이 31일 오후 일찍 끊기는 곳도 있습니다. <strong>12월 30일까지 입금을 마치고 입금 확인증을 남겨 두세요.</strong></p>
+      <div class="notice warn">
+        <strong>12월에 몰아쓰는 카드 실적은 효과가 제한적입니다.</strong> 신용카드 소득공제는 연간 사용액 기준이라, 이미 한도를 넘겼다면 12월에 더 써도 공제가 늘지 않습니다. 남은 한도가 있는지 홈택스 미리보기로 확인하세요.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>공식 출처와 근거</h2>
+      <p class="sub">2026년 11월 확인. 제도는 개정될 수 있으니 신고 전 최신 안내를 확인하세요.</p>
+      <ul class="source-list">
+        <li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7874" target="_blank" rel="noopener">국세청 연말정산 항목별 설명</a> — 연금계좌·기부금·월세 세액공제 공제율과 한도</li>
+        <li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239025" target="_blank" rel="noopener">국세청 월세액 세액공제 안내</a> — 총급여 8,000만 원 이하, 월세 1,000만 원 한도, 17%/15%</li>
+        <li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239040" target="_blank" rel="noopener">국세청 기부금 세액공제 안내</a> — 1,000만 원 이하 15%, 초과 30%, 고향사랑기부금 100/110</li>
+        <li><a href="https://www.hometax.go.kr/" target="_blank" rel="noopener">국세청 홈택스</a> — 연말정산 미리보기, 간소화 서비스</li>
+        <li><a href="https://100lifeplan.fss.or.kr/" target="_blank" rel="noopener">금융감독원 통합연금포털</a> — 연금저축·IRP 납입한도와 수수료</li>
+        <li><a href="https://isa.kofia.or.kr/" target="_blank" rel="noopener">금융투자협회 ISA 다모아</a> — ISA 의무가입 3년, 만기 후 60일 내 연금계좌 전환</li>
+        <li><a href="https://yumam.kbiz.or.kr/" target="_blank" rel="noopener">중소기업중앙회 노란우산공제</a> — 소득공제 한도(사업소득 4천 이하 600만 원 등)</li>
+        <li>소득세법 제59조의3·제59조의4, 조세특례제한법 제86조의3·제58조 — 국가법령정보센터(law.go.kr)</li>
+      </ul>
+      <p class="disclaimer" style="margin-top:14px;">
+        체크리스트는 2026년 귀속 기준의 안내이며, 실제 공제액은 소득·다른 공제·결정세액에 따라 달라집니다. 납입 전에는 해당 금융기관과 국세청 안내를 확인하세요.
+      </p>
+    </div>
+  </section>
+
+  <div class="print-bar no-print">
+    <button type="button" class="btn-print" id="printBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      계산 결과 인쇄 · PDF 저장
+    </button>
+    <p class="print-hint">인쇄 대화상자에서 대상을 ‘PDF로 저장’으로 고르면 파일로 보관할 수 있어요.</p>
+  </div>
+
+  <!-- 애드센스: 본문 중간 (승인 후 주석 해제) -->
+  <!--
+  <div class="no-print" style="margin:0 0 18px;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6878215996562815" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  -->
+
+  <section class="card no-print">
+    <h2>놓치기 쉬운 함정 5가지</h2>
+    <p class="sub">계산기를 쓰기 전에 이 다섯 개만 확인하세요.</p>
+    <ol class="tips">
+      <li><strong>연금저축에 900만 원 몰아넣기</strong>연금저축 단독 한도는 600만 원입니다. 900만 원을 넣어도 300만 원은 공제되지 않아요. 남은 300만 원은 IRP에 넣어야 합니다.</li>
+      <li><strong>“원금만 빼면 세금 없지?”</strong>세액공제 받은 원금과 운용수익은 해지 시 전액 16.5% 과세 대상입니다. 세금 없이 나가는 건 공제받지 않은 초과 납입금뿐이에요.</li>
+      <li><strong>납입한도 1,800만 원과 공제한도 900만 원 혼동</strong>연금계좌에는 전 금융기관 합산 연 1,800만 원까지 넣을 수 있지만, 세액공제는 900만 원(ISA 전환 시 1,200만 원)까지입니다.</li>
+      <li><strong>IRP에서 일부만 빼려는 시도</strong>연금저축은 세금을 내고 일부 인출이 되지만, IRP는 법정 사유가 아니면 계좌를 해지해야 합니다. 그마저 퇴직금 재원과 개인 납입분이 섞여 있으면 세금 계산이 따로입니다.</li>
+      <li><strong>결정세액이 0원인데 한도 채우기</strong>세액공제는 낼 세금을 깎는 제도입니다. 다른 공제로 이미 낼 세금이 없으면 계산만큼 환급되지 않습니다. 공제 못 받은 납입금은 다음 해로 이월 신청이 가능하니 금융사에 문의하세요.</li>
+    </ol>
+  </section>
+
+  <section class="card no-print faq">
+    <h2>자주 묻는 질문</h2>
+    <p class="sub">2026년 귀속 기준으로 정리했습니다.</p>
+
+    <details>
+      <summary>총급여가 5,500만 원을 딱 10만 원 넘으면 어떻게 되나요?</summary>
+      <div class="answer">근로소득만 있는 경우 총급여 5,500만 원을 넘으면 전체 납입액에 13.2%가 일괄 적용됩니다(구간별 차등이 아님). 900만 원을 채웠을 때 환급액이 148만 5천원에서 118만 8천원으로 줄어 29만 7천원 차이가 납니다.</div>
+    </details>
+    <details>
+      <summary>ISA 만기 자금을 옮기면 얼마나 더 받나요?</summary>
+      <div class="answer">만기일부터 60일 이내에 연금계좌로 옮긴 금액의 10%(최대 300만 원)가 기본 한도와 별도로 더해집니다. 16.5% 기준 최대 49만 5천원, 13.2% 기준 39만 6천원을 더 받는 셈입니다. 기본 900만 원을 이미 채운 사람이 3,000만 원을 옮길 때 한 해 공제 대상은 1,200만 원, 환급액은 198만 원까지 늘어납니다.</div>
+    </details>
+    <details>
+      <summary>연금저축과 IRP, 어디에 먼저 넣어야 하나요?</summary>
+      <div class="answer">세액공제만 보면 연금저축 600만 원을 먼저 채우고 IRP에 300만 원을 넣는 조합이 가장 흔합니다(합산 900만 원). 다만 IRP는 중도인출이 막혀 있으니, 목돈이 필요할 수 있는 사람은 연금저축 비중을 높이는 편이 안전합니다.</div>
+    </details>
+    <details>
+      <summary>중도해지 세금은 어떻게 계산되나요?</summary>
+      <div class="answer">세액공제 받은 납입원금과 운용수익을 더한 금액에 16.5%(소득세 15% + 지방소득세 1.5%)를 곱합니다. 운용손실이 나도 세금은 원금 기준으로 계산되고 손실을 세금에서 빼 주지는 않습니다. 해지하는 해에 넣은 금액은 세액공제도 받지 못합니다.</div>
+    </details>
+    <details>
+      <summary>55세가 안 됐는데 병원비로 급히 꺼내야 합니다.</summary>
+      <div class="answer">본인이나 부양가족이 3개월 이상 요양이 필요한 경우는 소득세법상 부득이한 사유로 연금소득세 3.3~5.5%가 적용됩니다. 사유 확인일부터 6개월 안에 진단서 등 증빙을 금융사에 제출해야 하며, IRP는 6개월 이상 요양 등 별도 요건을 함께 봅니다.</div>
+    </details>
+    <details>
+      <summary>연금을 한 번에 많이 받으면 세금이 늘어나나요?</summary>
+      <div class="answer">사적연금 연 수령액이 1,500만 원을 넘으면 16.5% 분리과세와 종합과세 중 유리한 쪽을 고를 수 있습니다. 다른 소득이 적으면 종합과세가, 많으면 16.5% 분리과세가 유리한 경우가 많습니다. 1,500만 원 이하로 나눠 받으면 3.3~5.5%가 유지됩니다.</div>
+    </details>
+    <details>
+      <summary>2026년에 한도나 공제율이 바뀌었나요?</summary>
+      <div class="answer">아니요. 연금저축 600만 원·합산 900만 원, 16.5%/13.2%는 2023년 이후 같은 수준이 유지되고 있습니다. 2025년 귀속 연말정산과 2026년 귀속 모두 동일합니다.</div>
+    </details>
+    <details>
+      <summary>12월 31일에 넣어도 올해 세액공제를 받을 수 있나요?</summary>
+      <div class="answer">연금저축·IRP는 12월 31일까지 입금된 금액이 해당 과세기간 납입액으로 인정됩니다. 다만 31일 저녁 이체는 금융사 마감 시간이나 다음 영업일 처리로 넘어갈 수 있어 30일까지 입금을 마치는 편이 안전합니다. 입금 확인증(납입증명서)을 남겨 두세요.</div>
+    </details>
+    <details>
+      <summary>12월에 기부하면 올해 연말정산에 반영되나요?</summary>
+      <div class="answer">2026년 12월 31일까지 실제로 지급한 기부금이 2026년 귀속 대상입니다. 1월에 지급하면 다음 해 귀속으로 넘어갑니다. 기부금 1,000만 원 이하분은 15%(지방소득세 포함 16.5%), 초과분은 30% 세액공제되고, 고향사랑기부금은 10만 원까지 사실상 전액 공제됩니다(10만~20만 원 40%, 20만 원 초과 15%).</div>
+    </details>
+    <details>
+      <summary>월세 세액공제는 12월에 무엇을 준비해야 하나요?</summary>
+      <div class="answer">총급여 8,000만 원(종합소득금액 7,000만 원) 이하 무주택 세대주·세대원이면 2026년에 낸 월세의 17%(총급여 5,500만 원 초과는 15%)를 연 1,000만 원 한도로 공제받습니다. 임대차계약서 사본, 월세 이체 내역, 주민등록등본을 준비하고 계약서 주소와 전입신고 주소가 같은지 확인하세요.</div>
+    </details>
+    <details>
+      <summary>이 계산 결과를 세무 신고에 그대로 써도 되나요?</summary>
+      <div class="answer">아니요. 이 계산은 결정세액이 충분하다는 가정의 모의 계산입니다. 실제 환급액은 다른 소득·공제·기납부세액에 따라 달라지므로 홈택스 연말정산 미리보기나 세무 전문가 확인을 권합니다.</div>
+    </details>
+  </section>
+
+  <section class="card no-print">
+    <h2>계산 기준과 출처</h2>
+    <p class="sub">2026년 11월 확인. 세법은 개정될 수 있으니 신고 전 최신 내용을 확인하세요.</p>
+    <ul class="source-list">
+      <li>소득세법 제59조의3(연금계좌세액공제) — 공제율 12%·15%, 연금저축 600만 원·합산 900만 원, ISA 전환금액의 10%(300만 원 한도) 추가 (2026. 7. 1. 시행 조문)</li>
+      <li>소득세법 시행령 제118조의2 제3항 — ISA 만기일부터 60일 이내 납입</li>
+      <li>소득세법 제20조의3·시행령 제40조의2 — 연금수령 요건(55세·5년·한도)과 연금소득세 5.5/4.4/3.3%</li>
+      <li>소득세법 제14조 제3항 제9호, 제64조의4 — 사적연금 1,500만 원 초과 시 16.5% 분리과세 또는 종합과세</li>
+      <li>소득세법 제21조·제129조 — 연금외수령 기타소득세 15%(지방소득세 포함 16.5%)</li>
+      <li>소득세법 시행령 제40조의3 — 연금계좌 인출 순서, 운용손실의 역순 차감(제5항)</li>
+      <li>금융감독원 통합연금포털 — 연금저축 해지·중도인출 과세, IRP 세액공제 한도</li>
+      <li>근로자퇴직급여 보장법 시행령 제18조·시행규칙 제10조 — IRP 중도인출 사유, 위험자산 70% 한도</li>
+    </ul>
+    <p class="disclaimer" style="margin-top:14px;">
+      본 계산 결과는 2026년 소득세법 기준의 모의 계산이며, 실제 연말정산 결정세액·다른 공제·기납부세액·금융사 수수료·운용손익에 따라 금액이 달라질 수 있습니다. 세무 신고나 해지 전에는 국세청 홈택스와 해당 금융기관에 확인하시기 바랍니다. 이 페이지는 특정 금융상품을 권유하지 않습니다.
+    </p>
+  </section>
+
+  <!-- ══════════ 인쇄용 리포트 (화면에서는 숨김) ══════════ -->
+  <section id="printReport" aria-hidden="true"></section>
+</main>
+
+<footer class="site-footer no-print">
+  <div class="wrap">
+    <div class="links">
+      <a href="https://leavepay-2026.netlify.app/">공무원 연가보상비 계산기</a>
+      <a href="https://taxback-2026.netlify.app/">연말정산 환급금 계산기</a>
+      <a href="https://jobbenefit-2026.netlify.app/">실업급여·퇴직금 계산기</a>
+      <a href="https://loandsr-2026.netlify.app/">대출 DSR 계산기</a>
+      <a href="https://parentalleave-2026.netlify.app/">육아휴직 급여 계산기</a>
+    </div>
+    <p class="fine">2026 연금저축·IRP 세액공제 &amp; 해지 손익 계산기 · 2026년 귀속 소득세법 기준 · 무료</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ───────── 상수 ───────── */
+  var LIM = {
+    PENSION_CAP: 6000000,   // 연금저축 단독 한도
+    BASE_CAP: 9000000,      // 연금저축 + IRP 합산 한도
+    ISA_RATE: 0.10,         // ISA 전환금액의 10%
+    ISA_EXTRA_CAP: 3000000, // 추가 한도 상한
+    CONTRIB_CAP: 18000000,  // 연금계좌 연 납입한도
+    SALARY_LINE: 55000000,  // 총급여 경계
+    TOTAL_INCOME_LINE: 45000000, // 종합소득금액 경계
+    EXIT_TAX: 0.165,        // 연금외수령 기타소득세(지방세 포함)
+    ANNUAL_PENSION_LINE: 15000000 // 사적연금 분리과세 기준
+  };
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  function won(n) {
+    if (!isFinite(n)) n = 0;
+    var neg = n < 0;
+    var s = Math.round(Math.abs(n)).toLocaleString('ko-KR');
+    return (neg ? '-' : '') + s + '원';
+  }
+  function wonShort(n) {
+    var man = n / 10000;
+    var s = (Math.round(man * 10) / 10).toLocaleString('ko-KR');
+    return s + '만 원';
+  }
+  function manText(n) {
+    // 프로그레스 바 라벨용: 400만 / 600만
+    return (Math.round(n / 10000)).toLocaleString('ko-KR') + '만';
+  }
+  function money(n) {
+    return Math.round(n).toLocaleString('ko-KR');
+  }
+
+  /* ───────── 금액 입력 포맷 ───────── */
+  function parseAmount(str) {
+    if (!str) return 0;
+    var neg = /^-/.test(str) || /^-/.test(String(str).trim());
+    var digits = String(str).replace(/[^0-9]/g, '');
+    var v = digits ? parseInt(digits, 10) : 0;
+    return neg ? -v : v;
+  }
+  function formatAmount(v, allowNeg) {
+    if (v === 0) return '0';
+    if (v < 0) return '-' + Math.abs(v).toLocaleString('ko-KR');
+    return v.toLocaleString('ko-KR');
+  }
+
+  var amountInputs = [
+    { id: 'incomeAmount', min: 0, max: 1000000000, allowNeg: false, hint: 'incomeHint' },
+    { id: 'pensionAmount', min: 0, max: LIM.CONTRIB_CAP, allowNeg: false, hint: 'pensionHint' },
+    { id: 'irpAmount', min: 0, max: LIM.CONTRIB_CAP, allowNeg: false, hint: 'irpHint' },
+    { id: 'isaAmount', min: 0, max: 1000000000, allowNeg: false, hint: 'isaHint' },
+    { id: 'targetExtra', min: 0, max: 10000000, allowNeg: false },
+    { id: 'exitPrincipal', min: 0, max: 1000000000, allowNeg: false, hint: 'exitPrincipalHint' },
+    { id: 'exitProfit', min: -1000000000, max: 1000000000, allowNeg: true, hint: 'exitProfitHint' },
+    { id: 'exitNonDeduct', min: 0, max: 1000000000, allowNeg: false },
+    { id: 'exitReceived', min: 0, max: 1000000000, allowNeg: false }
+  ];
+
+  amountInputs.forEach(function (cfg) {
+    var el = $(cfg.id);
+    if (!el) return;
+    el.addEventListener('input', function () {
+      var raw = el.value;
+      var negSign = cfg.allowNeg && raw.trim().charAt(0) === '-';
+      var digits = raw.replace(/[^0-9]/g, '');
+      if (digits === '') {
+        el.dataset.value = '0';
+        el.value = negSign ? '-' : '';
+        onChange(cfg.id);
+        return;
+      }
+      var v = parseInt(digits, 10);
+      if (negSign) v = -v;
+      if (v < cfg.min) v = cfg.min;
+      if (v > cfg.max) v = cfg.max;
+      el.dataset.value = String(v);
+      el.value = formatAmount(v, cfg.allowNeg);
+      // 커서를 끝으로 (콤마 삽입 후 어색함 방지)
+      if (document.activeElement === el) {
+        el.setSelectionRange(el.value.length, el.value.length);
+      }
+      onChange(cfg.id);
+    });
+    el.addEventListener('blur', function () {
+      var v = parseAmount(el.value);
+      el.value = v === 0 ? '0' : formatAmount(v, cfg.allowNeg);
+      el.dataset.value = String(v);
+      onChange(cfg.id);
+    });
+    el.dataset.value = String(parseAmount(el.value));
+  });
+
+  document.querySelectorAll('.chips').forEach(function (group) {
+    var targetId = group.getAttribute('data-target');
+    group.addEventListener('click', function (e) {
+      var btn = e.target.closest('.chip');
+      if (!btn) return;
+      var el = $(targetId);
+      if (!el) return;
+      var v = parseInt(btn.getAttribute('data-val'), 10);
+      el.dataset.value = String(v);
+      el.value = formatAmount(v, targetId === 'exitProfit');
+      onChange(targetId);
+    });
+  });
+
+  function val(id) {
+    var el = $(id);
+    if (!el) return 0;
+    if (el.dataset && el.dataset.value !== undefined) {
+      var dv = parseInt(el.dataset.value, 10);
+      if (!isNaN(dv)) return dv;
+    }
+    return parseAmount(el.value);
+  }
+
+  /* ───────── 상태 읽기 ───────── */
+  function readCreditState() {
+    var isEarned = (document.querySelector('input[name="incomeType"]:checked') || {}).value === 'earned';
+    var income = val('incomeAmount');
+    var line = isEarned ? LIM.SALARY_LINE : LIM.TOTAL_INCOME_LINE;
+    var low = income <= line;
+    var isaTargetEl = document.querySelector('input[name="isaTarget"]:checked');
+    return {
+      isEarned: isEarned,
+      income: income,
+      line: line,
+      lowIncome: low,
+      rate: low ? 0.165 : 0.132,
+      incomeTaxRate: low ? 0.15 : 0.12,
+      pension: Math.max(0, val('pensionAmount')),
+      irp: Math.max(0, val('irpAmount')),
+      isa: Math.max(0, val('isaAmount')),
+      isaTarget: isaTargetEl ? isaTargetEl.value : 'irp',
+      isaWithin60: $('isaWithin60').checked
+    };
+  }
+
+  /* ───────── 세액공제 계산 ───────── */
+  function computeCredit(s) {
+    var isaToPension = s.isaTarget === 'pension';
+    var pensionRaw = s.pension + (isaToPension ? s.isa : 0);
+    var irpRaw = s.irp + (isaToPension ? 0 : s.isa);
+    var isaActive = s.isa > 0 && s.isaWithin60;   // 60일 이내여야 10% 추가 한도
+
+    var pensionCounted = Math.min(pensionRaw, LIM.PENSION_CAP);
+    var pool = pensionCounted + irpRaw;           // 캡 전 공제대상 후보
+    var isaExtra = isaActive ? Math.min(s.isa * LIM.ISA_RATE, LIM.ISA_EXTRA_CAP) : 0;
+    var limit = LIM.BASE_CAP + isaExtra;
+    var eligible = Math.max(0, Math.min(pool, limit));
+
+    var credit = Math.round(eligible * s.rate);
+    var incomeTax = Math.round(eligible * s.incomeTaxRate);
+    var localTax = credit - incomeTax;
+
+    var room = Math.max(0, limit - eligible);
+    var roomBase = Math.max(0, LIM.BASE_CAP - Math.min(pool, LIM.BASE_CAP));
+
+    return {
+      rate: s.rate,
+      incomeTaxRate: s.incomeTaxRate,
+      pensionCounted: pensionCounted,
+      pensionRaw: pensionRaw,
+      irpRaw: irpRaw,
+      pool: pool,
+      isaExtra: isaExtra,
+      isaActive: isaActive,
+      limit: limit,
+      eligible: eligible,
+      credit: credit,
+      incomeTax: incomeTax,
+      localTax: localTax,
+      room: room,
+      roomBase: roomBase,
+      pensionRoom: Math.max(0, LIM.PENSION_CAP - Math.min(s.pension, LIM.PENSION_CAP)),
+      irpRoom: Math.max(0, LIM.BASE_CAP - Math.min(s.pension, LIM.PENSION_CAP) - Math.min(s.irp, LIM.BASE_CAP)),
+      overPension: Math.max(0, pensionRaw - LIM.PENSION_CAP),
+      overBase: Math.max(0, pool - LIM.BASE_CAP),
+      cappedByLimit: pool > limit
+    };
+  }
+
+  /* ───────── 목표 환급 역산 ───────── */
+  function computeReverse(target, s, c) {
+    target = Math.max(0, target);
+    var res = { target: target, possible: false, neededEligible: 0, toPension: 0, toIrp: 0, maxAdd: c.room, maxAddRefund: Math.round(c.room * c.rate), remainingPension: c.pensionRoom, remainingIrp: c.irpRoom, isaHint: false, note: '' };
+    if (target === 0) { res.possible = true; res.note = 'zero'; return res; }
+    var needed = Math.ceil(target / c.rate);
+    res.neededEligible = needed;
+    if (needed > c.room) {
+      res.possible = false;
+      return res;
+    }
+    res.possible = true;
+    var left = needed;
+    var toPension = Math.min(left, c.pensionRoom);
+    left -= toPension;
+    res.toPension = toPension;
+    res.toIrp = left;
+    if (res.toIrp > c.irpRoom) { res.isaHint = true; }
+    return res;
+  }
+
+  /* ───────── 해지 계산 ───────── */
+  function computeExit(s) {
+    var principal = Math.max(0, s.principal);
+    var profit = s.profit;
+    var nonDeduct = Math.max(0, s.nonDeduct);
+    var accountValue = principal + profit + nonDeduct;
+    if (accountValue < 0) accountValue = 0;
+    // 손실이면 과세대상(공제받은 원금+운용수익)에서부터 차감된다 — 소득세법 시행령 §40조의3 ⑤
+    var taxBase = Math.max(0, principal + profit);
+    if (taxBase > accountValue) taxBase = accountValue;
+
+    var cancelTax = Math.round(taxBase * LIM.EXIT_TAX);
+    var cancelNet = accountValue - cancelTax;
+
+    var pensionTax;
+    var splitNote = s.split;
+    if (s.split) {
+      pensionTax = Math.round(taxBase * s.pensionRate);
+    } else {
+      var first = Math.min(taxBase, LIM.ANNUAL_PENSION_LINE);
+      var rest = Math.max(0, taxBase - LIM.ANNUAL_PENSION_LINE);
+      pensionTax = Math.round(first * s.pensionRate + rest * LIM.EXIT_TAX);
+    }
+    var pensionNet = accountValue - pensionTax;
+    var diff = pensionNet - cancelNet;
+
+    var received = s.received;
+    return {
+      principal: principal,
+      profit: profit,
+      nonDeduct: nonDeduct,
+      accountValue: accountValue,
+      taxBase: taxBase,
+      cancelTax: cancelTax,
+      cancelNet: cancelNet,
+      pensionTax: pensionTax,
+      pensionNet: pensionNet,
+      diff: diff,
+      received: received,
+      totalNow: received - cancelTax,
+      totalLater: received - pensionTax,
+      pensionRate: s.pensionRate,
+      split: splitNote,
+      loss: profit < 0
+    };
+  }
+
+  /* ───────── 렌더: 세액공제 ───────── */
+  var lastCredit = null, lastState = null;
+
+  function renderCredit() {
+    var s = readCreditState();
+    var c = computeCredit(s);
+    lastCredit = c; lastState = s;
+
+    $('creditBig').innerHTML = money(c.credit) + '<small>원</small>';
+    $('creditSub').innerHTML = '공제대상 <strong>' + wonShort(c.eligible) + '</strong> × <strong>' +
+      (c.rate * 100).toFixed(1) + '%</strong> · 소득세 ' + won(c.incomeTax) + ' + 지방소득세 ' + won(c.localTax);
+
+    $('outPension').textContent = won(c.pensionCounted) + (s.isaTarget === 'pension' && s.isa > 0 ? ' (ISA 전환 포함)' : '');
+    $('outIrp').textContent = won(s.irp) + (s.isaTarget === 'irp' && s.isa > 0 ? ' (+ ISA 전환 ' + wonShort(s.isa) + ')' : '');
+    $('outIsaRow').hidden = !(s.isa > 0);
+    $('outIsa').textContent = won(s.isa) + (c.isaActive ? ' (추가 한도 ' + won(c.isaExtra) + ')' : ' (60일 경과 · 추가 한도 없음)');
+    $('outEligible').textContent = won(c.eligible);
+    $('outRoom').textContent = won(c.room);
+
+    var pPct = Math.min(100, (Math.min(s.pension, LIM.PENSION_CAP) / LIM.PENSION_CAP) * 100);
+    var bPct = Math.min(100, (Math.min(c.pool, LIM.BASE_CAP) / LIM.BASE_CAP) * 100);
+    $('barPension').style.width = pPct + '%';
+    $('barPension').className = 'bar-fill' + (pPct >= 100 ? ' full' : '');
+    $('barPensionText').textContent = manText(Math.min(s.pension, LIM.PENSION_CAP)) + ' / 600만';
+    $('barBase').style.width = bPct + '%';
+    $('barBase').className = 'bar-fill' + (bPct >= 100 ? ' full' : '');
+    $('barBaseText').textContent = manText(Math.min(c.pool, LIM.BASE_CAP)) + ' / 900만';
+    $('barIsaWrap').hidden = !c.isaActive;
+    var iPct = c.isaExtra ? Math.min(100, (c.isaExtra / LIM.ISA_EXTRA_CAP) * 100) : 0;
+    $('barIsa').style.width = iPct + '%';
+    $('barIsa').className = 'bar-fill accent' + (iPct >= 100 ? ' full' : '');
+    $('barIsaText').textContent = manText(c.isaExtra) + ' / 300만';
+
+    // 소득 구간 배지
+    var diffToLine = s.line - s.income;
+    var badge = $('incomeBadge');
+    badge.className = 'badge ' + (s.lowIncome ? (diffToLine <= 5000000 ? 'near' : 'ok') : 'over');
+    if (s.lowIncome) {
+      badge.textContent = (c.rate === 0.165 ? '16.5% 구간' : '') + ' · 경계까지 ' + (diffToLine > 0 ? wonShort(diffToLine) + ' 남음' : '경계선');
+    } else {
+      badge.textContent = '13.2% 구간 · 경계를 ' + wonShort(Math.abs(diffToLine)) + ' 넘음';
+    }
+
+    // 안내 문구
+    var notes = [];
+    if (!s.isEarned) {
+      notes.push('종합소득금액 ' + wonShort(s.income) + ' 기준으로 판정했습니다. 근로소득만 있다면 총급여 기준(5,500만 원)으로 다시 계산해 보세요.');
+    }
+    if (c.overPension > 0) {
+      notes.push('연금저축에 한도(600만 원)를 넘는 ' + won(c.overPension) + '은 공제되지 않습니다. 그 금액까지 공제받으려면 IRP에 넣어야 해요.');
+    }
+    if (c.overBase > 0 && c.isaActive) {
+      notes.push('기본 한도(900만 원)를 넘는 ' + won(c.overBase) + '은 ISA 전환 추가 한도로만 인정됩니다.');
+    } else if (c.overBase > 0) {
+      notes.push('합산 한도(900만 원)를 넘는 ' + won(c.overBase) + '은 세액공제 대상이 아닙니다. 공제받지 않은 이 금액은 나중에 꺼낼 때 과세되지 않아요.');
+    }
+    if (s.isa > 0 && !s.isaWithin60) {
+      notes.push('ISA 만기 전환은 만기일부터 60일 이내에 옮겨야 추가 한도(10%)가 생깁니다. 체크하지 않아 전환금을 일반 납입으로만 인정하고 추가 한도는 0으로 계산했습니다.');
+    }
+    if (c.isaActive && s.isa < 30000000) {
+      notes.push('ISA 전환금이 ' + wonShort(s.isa) + '이라 추가 한도는 ' + won(c.isaExtra) + '입니다. 3,000만 원을 넘겨 옮겨야 300만 원을 다 채웁니다(옮긴 금액 전부가 아니라 10%만 인정).');
+    }
+    if (s.pension + s.irp > LIM.CONTRIB_CAP) {
+      notes.push('연금계좌 연 납입한도는 전 금융기관 합산 1,800만 원입니다(ISA 전환금은 별도). 초과분은 입금되지 않을 수 있어요.');
+    }
+    var notice = $('creditNotice');
+    if (notes.length) {
+      notice.hidden = false;
+      notice.className = 'notice';
+      notice.innerHTML = notes.join('<br />');
+    } else {
+      notice.hidden = true;
+      notice.innerHTML = '';
+    }
+
+    renderReverse();
+    if (document.getElementById('exitPrincipal').dataset.value !== undefined) renderExit();
+  }
+
+  function renderReverse() {
+    var out = $('reverseOut');
+    if (!lastCredit || !lastState) return;
+    var target = Math.max(0, val('targetExtra'));
+    var r = computeReverse(target, lastState, lastCredit);
+    var c = lastCredit;
+
+    if (target === 0) {
+      out.className = 'reverse-out';
+      out.innerHTML = '<p class="line">목표 금액을 입력하면 필요한 추가 납입액을 계산합니다.</p>' +
+        '<p class="line">지금 남은 한도 <strong>' + won(c.room) + '</strong>까지 채우면 <strong>' + won(c.maxAddRefund || Math.round(c.room * c.rate)) + '</strong>을 더 돌려받을 수 있어요.</p>';
+      return;
+    }
+
+    if (r.possible) {
+      var where = [];
+      if (r.toPension > 0) where.push('연금저축 ' + won(r.toPension));
+      if (r.toIrp > 0) where.push('IRP ' + won(r.toIrp));
+      out.className = 'reverse-out';
+      var html = '<p class="line"><strong>' + won(target) + '</strong>을 더 환급받으려면 공제대상 금액을 <strong>' + won(r.neededEligible) + '</strong>만큼 늘려야 합니다.</p>';
+      if (where.length) {
+        html += '<p class="line">추가 납입: <strong>' + where.join(' + ') + '</strong></p>';
+        if (r.toIrp > c.irpRoom) {
+          html += '<p class="line" style="color:var(--warn);font-size:.84rem;">기본 한도(900만 원)를 넘는 부분은 ISA 만기 전환 추가 한도로만 채울 수 있습니다.</p>';
+        }
+      } else if (c.room > 0) {
+        html += '<p class="line">계좌 배분은 이미 한도에 가까워, 남은 한도 ' + won(c.room) + ' 안에서 추가 납입하면 됩니다.</p>';
+      }
+      html += '<p class="line" style="color:var(--muted);font-size:.84rem;">납입 후 예상 환급액은 ' + won(c.credit + Math.round(r.neededEligible * c.rate)) + '입니다.</p>';
+      if (c.rate === 0.132) {
+        html += '<p class="line" style="color:var(--muted);font-size:.84rem;">13.2% 구간이라 10만 원 환급에 약 ' + won(Math.ceil(target / c.rate)) + '이 필요합니다.</p>';
+      }
+      out.innerHTML = html;
+    } else {
+      out.className = 'reverse-out warn';
+      var html2 = '<p class="line"><strong>' + won(target) + '</strong>은 지금 남은 한도로는 만들 수 없습니다.</p>' +
+        '<p class="line">남은 한도 <strong>' + won(c.room) + '</strong>을 모두 채워도 추가 환급은 최대 <strong>' + won(r.maxAddRefund) + '</strong>입니다.' +
+        (c.isaExtra < LIM.ISA_EXTRA_CAP ? ' ISA 만기 자금을 더 옮기면 추가 한도가 늘어납니다.' : '') + '</p>';
+      if (c.room <= 0) {
+        html2 += '<p class="line">올해 공제 한도(' + wonShort(c.limit) + ')를 이미 다 채웠습니다. 더 넣어도 세액공제는 늘지 않아요.</p>';
+      }
+      out.innerHTML = html2;
+    }
+  }
+
+  /* ───────── 렌더: 해지 ───────── */
+  var lastExit = null;
+
+  function renderExit() {
+    var autoEl = $('autoReceived');
+    var principal = Math.max(0, val('exitPrincipal'));
+    var s = readCreditState();
+    var rateNow = s.rate;
+    if (autoEl.checked) {
+      var el = $('exitReceived');
+      var v = Math.round(principal * rateNow);
+      el.dataset.value = String(v);
+      el.value = formatAmount(v, false);
+    }
+    var st = {
+      principal: principal,
+      profit: val('exitProfit'),
+      nonDeduct: val('exitNonDeduct'),
+      received: val('exitReceived'),
+      pensionRate: parseFloat($('exitAge').value),
+      split: $('exitSplit').checked
+    };
+    var e = computeExit(st);
+    lastExit = e;
+
+    $('exitBig').innerHTML = money(e.cancelNet) + '<small>원</small>';
+    $('exitSub').innerHTML = '평가액 ' + wonShort(e.accountValue) + '에서 기타소득세 <strong>' + wonShort(e.cancelTax) + '</strong>을 떼고 받는 금액';
+
+    $('nowNet').textContent = won(e.cancelNet);
+    $('nowTax').textContent = won(e.cancelTax);
+    $('nowBase').textContent = won(e.taxBase);
+
+    var ageLabel = { '0.055': '55세 이후 연금수령', '0.044': '70세 이후 연금수령', '0.033': '80세 이후 연금수령' }[String(e.pensionRate)] || '연금수령';
+    $('laterTitle').textContent = e.split ? ageLabel : '한 번에 수령';
+    $('laterCap').textContent = e.split
+      ? '연금소득세 ' + (e.pensionRate * 100).toFixed(1) + '% · 요건 충족 가정'
+      : '1년 수령액 1,500만 원 초과분 16.5%';
+    $('laterNet').textContent = won(e.pensionNet);
+    $('laterTax').textContent = won(e.pensionTax);
+    $('laterBase').textContent = won(e.taxBase);
+
+    $('outReceived').textContent = won(e.received);
+    $('outTotalNow').textContent = won(e.totalNow);
+    $('outTotalLater').textContent = won(e.totalLater);
+    $('outDiff').textContent = won(e.diff);
+
+    var verdict = $('exitVerdict');
+    if (e.accountValue <= 0) {
+      verdict.innerHTML = '납입원금과 운용손익을 입력하면 비교가 시작됩니다.';
+    } else if (e.diff > 0) {
+      verdict.innerHTML = '지금 해지하면 연금으로 받을 때보다 <strong>' + won(e.diff) + '</strong>을 더 냅니다.' +
+        '<br /><span style="font-size:.84rem;color:var(--muted)">해지세 ' + won(e.cancelTax) + ' − 연금소득세 ' + won(e.pensionTax) + ' = ' + won(e.diff) + '</span>';
+    } else if (e.diff < 0) {
+      verdict.innerHTML = '이 조건에서는 지금 해지가 <strong>' + won(Math.abs(e.diff)) + '</strong> 유리합니다. 연금수령 시 세금이 더 큽니다.';
+    } else {
+      verdict.innerHTML = '두 경우의 세금이 같습니다.';
+    }
+
+    var notes = [];
+    if (e.loss) {
+      notes.push('운용손실 ' + won(Math.abs(e.profit)) + '은 과세대상(공제받은 원금·운용수익)에서 먼저 차감되어 세금이 줄어듭니다(소득세법 시행령 §40조의3 ⑤). 다만 손실 자체를 돌려받지는 못합니다.');
+    }
+    if (!e.split && e.taxBase > LIM.ANNUAL_PENSION_LINE) {
+      notes.push('한 번에 받으면 연 1,500만 원을 넘는 ' + won(e.taxBase - LIM.ANNUAL_PENSION_LINE) + '에 16.5%가 적용됩니다. 나눠 받으면 3.3~5.5%로 낮아질 수 있어요.');
+    }
+    if (e.received > e.cancelTax) {
+      notes.push('지금 해지해도 받은 세액공제 ' + won(e.received) + '가 해지세 ' + won(e.cancelTax) + '보다 커서, 총손익은 +' + won(e.totalNow) + '입니다. 다만 운용수익이 커질수록 이 차이는 줄어듭니다.');
+    } else {
+      notes.push('지금 해지하면 받은 세액공제 ' + won(e.received) + '보다 해지세 ' + won(e.cancelTax) + '가 커서 총손익이 ' + won(e.totalNow) + '입니다.');
+    }
+    var notice = $('exitNotice');
+    if (notes.length) {
+      notice.hidden = false;
+      notice.innerHTML = notes.join('<br />');
+    } else {
+      notice.hidden = true;
+    }
+  }
+
+  /* ───────── 12월 절세 마감 체크리스트 (13호 통합) ───────── */
+  var TAX_ITEMS = [
+    {
+      id: "pen", group: "A", badge: "12/31", hot: true,
+      title: "연금저축·IRP 납입 마무리",
+      desc: "연금저축 600만 원, IRP 합산 900만 원까지가 세액공제 대상입니다. 12월 31일 입금분까지 2026년 귀속으로 인정됩니다.",
+      effect: "16.5% 구간이면 900만 원에 <strong>148만 5천 원</strong>, 13.2% 구간이면 <strong>118만 8천 원</strong> 환급.",
+      src: { label: "국세청 연말정산 항목별 설명", url: "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7874" },
+      calc: true
+    },
+    {
+      id: "isa", group: "A", badge: "60일 이내", hot: false,
+      title: "ISA 만기 자금을 연금계좌로 전환",
+      desc: "ISA 의무가입 3년이 지나 만기 해지했다면, 60일 이내에 연금저축·IRP로 옮겨야 추가 한도가 생깁니다. 올해 한도에 더하려면 12월 31일까지 입금해야 합니다.",
+      effect: "전환금액의 10%, 최대 <strong>300만 원</strong> 추가 한도 → 16.5% 기준 <strong>49만 5천 원</strong> 더 환급.",
+      src: { label: "금융투자협회 ISA 다모아", url: "https://isa.kofia.or.kr/" },
+      calc: true
+    },
+    {
+      id: "yellow", group: "A", badge: "12/31", hot: false,
+      title: "노란우산공제 추가납입 (사업소득자)",
+      desc: "소기업·소상공인 공제는 납입액을 소득에서 빼 줍니다. 2026년 7월부터 분기 한도가 폐지되어 연 1,800만 원까지 넣을 수 있고, 12월에 새로 가입해도 당월 부금을 낸 뒤 남은 한도를 채울 수 있습니다.",
+      effect: "소득공제 한도 사업소득 4천만 이하 <strong>600만 원</strong> / 4천~6천 500만 / 6천~1억 400만 / 1억 초과 200만 원.",
+      src: { label: "중소기업중앙회 노란우산공제", url: "https://yumam.kbiz.or.kr/" },
+      calc: false
+    },
+    {
+      id: "donation", group: "A", badge: "12/31", hot: true,
+      title: "기부금 지급 마감",
+      desc: "12월 31일까지 실제로 지급한 기부금만 2026년 귀속으로 인정됩니다. 연말에 몰아서 기부할 계획이라면 30일까지 이체를 마치세요.",
+      effect: "1,000만 원 이하 <strong>15%</strong>(지방세 포함 16.5%), 초과분 30%. 고향사랑기부금은 10만 원까지 100/110.",
+      src: { label: "국세청 기부금 세액공제 안내", url: "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239040" },
+      calc: false
+    },
+    {
+      id: "rent", group: "A", badge: "12월분", hot: false,
+      title: "월세 납입 증빙 챙기기",
+      desc: "2026년에 낸 월세가 공제 대상입니다. 12월분까지 계좌이체로 납부하고, 계약서 주소와 주민등록 주소가 같은지 확인하세요.",
+      effect: "총급여 8,000만 원 이하 무주택 세대주·세대원, 월세 1,000만 원 한도로 <strong>17%</strong>(5,500만 초과 15%).",
+      src: { label: "국세청 월세액 세액공제 안내", url: "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239025" },
+      calc: false
+    },
+    {
+      id: "preview", group: "A", badge: "11월 중순~", hot: false,
+      title: "홈택스 연말정산 미리보기 확인",
+      desc: "11월 중순부터 홈택스에서 예상 환급·추납액을 확인할 수 있습니다. 12월에 남은 한도를 채울지, 카드 사용을 조정할지 이때 정하세요.",
+      effect: "예상 환급액과 공제 누락 항목을 미리 보고 <strong>12월 안에 보완</strong>할 수 있습니다.",
+      src: { label: "국세청 홈택스", url: "https://www.hometax.go.kr/" },
+      calc: false
+    },
+    {
+      id: "card", group: "A", badge: "확인", hot: false,
+      title: "12월 카드 몰아쓰기는 한도부터 확인",
+      desc: "신용카드 소득공제는 연간 사용액 기준입니다. 이미 공제 한도를 넘겼다면 12월에 더 써도 세금이 줄지 않으니, 남은 한도가 있는 경우에만 계획하세요.",
+      effect: "총급여의 20%를 넘는 사용액부터 공제. 한도는 총급여 구간별 <strong>250만~300만 원</strong>.",
+      src: { label: "국세청 연말정산 항목별 설명", url: "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7874" },
+      calc: false
+    },
+    {
+      id: "simple", group: "B", badge: "1월 중순", hot: false,
+      title: "간소화 서비스 자료 확인",
+      desc: "1월 중순 홈택스 간소화 서비스가 열리면 의료비·교육비·기부금·월세 자료가 빠짐없이 올라왔는지 확인합니다.",
+      effect: "조회되지 않는 자료는 영수증을 직접 제출해야 <strong>공제 누락</strong>을 막을 수 있습니다.",
+      src: { label: "국세청 홈택스", url: "https://www.hometax.go.kr/" },
+      calc: false
+    },
+    {
+      id: "rentdoc", group: "B", badge: "1월", hot: false,
+      title: "월세 세액공제 서류 준비",
+      desc: "임대차계약서 사본, 월세 이체 내역, 주민등록등본을 준비합니다. 계약서에 ‘세액공제 불가’ 특약이 있어도 효력이 없으니 포기하지 마세요.",
+      effect: "서류가 없으면 월세 공제를 <strong>한 푼도</strong> 받지 못합니다.",
+      src: { label: "국세청 월세액 세액공제 안내", url: "https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239025" },
+      calc: false
+    },
+    {
+      id: "pensiondoc", group: "B", badge: "1월", hot: false,
+      title: "연금계좌 납입증명서 발급",
+      desc: "연금저축·IRP 납입액은 간소화 서비스에 대부분 잡히지만, 누락되면 금융사 앱에서 납입증명서를 발급해 회사에 제출합니다.",
+      effect: "납입증명서가 없으면 세액공제가 <strong>반영되지 않을 수</strong> 있습니다.",
+      src: { label: "금융감독원 통합연금포털", url: "https://100lifeplan.fss.or.kr/" },
+      calc: false
+    },
+    {
+      id: "submit", group: "B", badge: "1월", hot: false,
+      title: "회사 제출·누락 보완",
+      desc: "회사에 제출한 소득·세액공제 신고서와 증빙이 맞는지 확인합니다. 누락 항목은 제출 기한 안에 보완하면 반영됩니다.",
+      effect: "제출 기한을 넘기면 <strong>경정청구</strong>로 돌려받아야 해 몇 달 늦어집니다.",
+      src: { label: "국세청 홈택스", url: "https://www.hometax.go.kr/" },
+      calc: false
+    }
+  ];
+
+  var TAX_KEY = "pt_tax_checks_v1";
+  var taxChecks = {};
+
+  function loadTaxChecks() {
+    try {
+      var raw = localStorage.getItem(TAX_KEY);
+      if (raw) {
+        var obj = JSON.parse(raw);
+        if (obj && typeof obj === "object") taxChecks = obj;
+      }
+    } catch (e) { /* 저장 불가 환경에서도 동작 */ }
+  }
+  function saveTaxChecks() {
+    try { localStorage.setItem(TAX_KEY, JSON.stringify(taxChecks)); } catch (e) { /* ignore */ }
+  }
+
+  function taxTargetDate() {
+    var now = new Date();
+    var d = new Date(now.getFullYear(), 11, 31);
+    if (now > d) d = new Date(now.getFullYear() + 1, 11, 31);
+    return d;
+  }
+
+  function renderChecklist() {
+    var target = taxTargetDate();
+    var now = new Date();
+    var days = Math.round((new Date(target.getFullYear(), target.getMonth(), target.getDate()) -
+      new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+    var total = TAX_ITEMS.length;
+    var done = TAX_ITEMS.filter(function (i) { return !!taxChecks[i.id]; }).length;
+
+    $("taxDday").innerHTML = days > 0 ? "D-" + days : (days === 0 ? "D-DAY" : "마감");
+    $("taxDdaySub").textContent = target.getFullYear() + "-12-31 · 체크 " + done + " / " + total;
+    $("ckCount").textContent = done + " / " + total;
+    $("ckBar").style.width = (done / total * 100) + "%";
+
+    var notice = $("taxNotice");
+    if (days < 0) {
+      notice.className = "notice warn";
+      notice.innerHTML = "<strong>올해 마감이 지났습니다.</strong> 새해에는 다음 12월 31일이 기준입니다. 지난해분은 경정청구로 돌려받을 수 있는지 홈택스에서 확인하세요.";
+    } else if (days <= 7) {
+      notice.className = "notice warn";
+      notice.innerHTML = "<strong>마감 " + days + "일 전입니다.</strong> 연금저축·IRP 입금과 기부금 이체를 오늘 처리하세요. 31일 이체는 다음 영업일로 넘어갈 수 있습니다.";
+    } else {
+      notice.className = "notice info";
+      notice.innerHTML = "<strong>12월 31일 입금분까지 올해 귀속</strong>입니다. 다만 31일 저녁 이체는 금융사 마감·다음 영업일 처리로 넘어갈 수 있으니 <strong>12월 30일까지</strong> 끝내는 게 안전합니다.";
+    }
+
+    ["A", "B"].forEach(function (group) {
+      var list = $(group === "A" ? "ckListA" : "ckListB");
+      if (!list) return;
+      list.innerHTML = TAX_ITEMS.filter(function (i) { return i.group === group; }).map(function (item) {
+        var isDone = !!taxChecks[item.id];
+        var links = '<a class="ck-src" href="' + item.src.url + '" target="_blank" rel="noopener">' + esc(item.src.label) + '</a>';
+        var calcBtn = item.calc ? '<button type="button" class="ck-gocalc" data-gocalc="' + item.id + '">① 탭에서 한도 계산</button>' : "";
+        return '<li class="ck-item' + (isDone ? " done" : "") + '" data-id="' + item.id + '">' +
+          '<label class="ck-top"><input type="checkbox" data-ck="' + item.id + '"' + (isDone ? " checked" : "") +
+          ' aria-label="' + esc(item.title) + ' 완료"><span class="ck-title">' + esc(item.title) +
+          '<span class="ck-badge' + (item.hot ? " hot" : "") + '">' + esc(item.badge) + '</span></span></label>' +
+          '<p class="ck-desc">' + esc(item.desc) + '</p>' +
+          '<p class="ck-effect">' + item.effect + '</p>' +
+          '<div class="ck-links">' + links + calcBtn + '</div>' +
+          '</li>';
+      }).join("");
+    });
+
+    document.querySelectorAll("input[data-ck]").forEach(function (box) {
+      box.addEventListener("change", function () {
+        var id = box.getAttribute("data-ck");
+        if (box.checked) taxChecks[id] = true; else delete taxChecks[id];
+        box.closest(".ck-item").classList.toggle("done", box.checked);
+        saveTaxChecks();
+        var d = TAX_ITEMS.filter(function (i) { return !!taxChecks[i.id]; }).length;
+        $("ckCount").textContent = d + " / " + total;
+        $("ckBar").style.width = (d / total * 100) + "%";
+        $("taxDdaySub").textContent = target.getFullYear() + "-12-31 · 체크 " + d + " / " + total;
+      });
+    });
+    document.querySelectorAll("[data-gocalc]").forEach(function (btn) {
+      btn.addEventListener("click", function () { selectTab("credit"); });
+    });
+  }
+
+  /* ───────── 인쇄 리포트 ───────── */
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (ch) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch];
+    });
+  }
+
+  function buildPrintReport() {
+    var now = new Date();
+    var stamp = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0') +
+      ' ' + String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+    var s = readCreditState();
+    var c = computeCredit(s);
+    var rt = computeReverse(Math.max(0, val('targetExtra')), s, c);
+    var e = computeExit({
+      principal: Math.max(0, val('exitPrincipal')),
+      profit: val('exitProfit'),
+      nonDeduct: val('exitNonDeduct'),
+      received: val('exitReceived'),
+      pensionRate: parseFloat($('exitAge').value),
+      split: $('exitSplit').checked
+    });
+
+    var incomeLabel = s.isEarned ? '총급여액(근로소득만)' : '종합소득금액';
+    var ageText = { '0.055': '만 55~69세 (5.5%)', '0.044': '만 70~79세 (4.4%)', '0.033': '만 80세 이상 (3.3%)' }[String(e.pensionRate)] || '';
+
+    var reverseText = rt.target === 0
+      ? '목표 미입력 (남은 한도 ' + won(c.room) + ' 채우면 ' + won(Math.round(c.room * c.rate)) + ' 추가)'
+      : (rt.possible
+        ? won(rt.target) + ' 추가 환급 → 공제대상 ' + won(rt.neededEligible) + ' 추가 납입 필요'
+        : '달성 불가 · 남은 한도로 최대 ' + won(rt.maxAddRefund) + ' 추가 가능');
+
+    var html = '';
+    html += '<h1>2026 연금저축·IRP 세액공제 &amp; 해지 손익 계산 결과</h1>';
+    html += '<p class="pr-sub">2026년 귀속 소득세법 기준 · 출력 ' + esc(stamp) + '</p>';
+    html += '<p class="pr-sub">pension-tax-2026 · 계산 결과는 모의 계산입니다.</p>';
+
+    html += '<h2>1. 입력 조건</h2>';
+    html += '<table><tbody>';
+    html += '<tr><th>' + incomeLabel + '</th><td class="num">' + won(s.income) + ' (' + wonShort(s.income) + ')</td></tr>';
+    html += '<tr><th>적용 공제율</th><td class="num">' + (c.rate * 100).toFixed(1) + '% (소득세 ' + (c.incomeTaxRate * 100).toFixed(0) + '% + 지방소득세)</td></tr>';
+    html += '<tr><th>연금저축 납입액</th><td class="num">' + won(s.pension) + '</td></tr>';
+    html += '<tr><th>IRP 납입액</th><td class="num">' + won(s.irp) + '</td></tr>';
+    if (s.isa > 0) {
+      html += '<tr><th>ISA 만기 전환금액</th><td class="num">' + won(s.isa) + ' (' + (s.isaTarget === 'pension' ? '연금저축' : 'IRP') + '로 전환' + (s.isaWithin60 ? ', 60일 이내' : ', 60일 경과로 추가 한도 없음') + ')</td></tr>';
+    }
+    html += '</tbody></table>';
+
+    html += '<h2>2. 세액공제 계산 결과</h2>';
+    html += '<table><tbody>';
+    html += '<tr><th>연금저축 인정액</th><td class="num">' + won(c.pensionCounted) +
+      (s.isaTarget === 'pension' && s.isa > 0 ? ' (ISA 전환 포함, 600만 원 한도)' : '') + '</td></tr>';
+    html += '<tr><th>IRP 인정액</th><td class="num">' + won(c.irpRaw) +
+      (s.isaTarget === 'irp' && s.isa > 0 ? ' (ISA 전환 ' + won(s.isa) + ' 포함)' : '') + '</td></tr>';
+    if (s.isa > 0) html += '<tr><th>ISA 전환 추가 한도</th><td class="num">' + won(c.isaExtra) + (c.isaActive ? '' : ' (60일 경과)') + '</td></tr>';
+    html += '<tr><th>세액공제 대상 납입액</th><td class="num">' + won(c.eligible) + '</td></tr>';
+    html += '<tr><th>남은 공제 한도</th><td class="num">' + won(c.room) + ' / 한도 ' + won(c.limit) + '</td></tr>';
+    html += '<tr><th>목표 역산</th><td class="num">' + esc(reverseText) + '</td></tr>';
+    html += '</tbody></table>';
+    html += '<div class="pr-highlight">예상 세액공제(환급)액 <span class="big">' + won(c.credit) + '</span><br />' +
+      '소득세 ' + won(c.incomeTax) + ' + 지방소득세 ' + won(c.localTax) + ' · 실제 환급액은 결정세액 한도 내에서 정해집니다.</div>';
+
+    html += '<h2>3. 중도해지 vs 연금수령</h2>';
+    html += '<table><tbody>';
+    html += '<tr><th>세액공제 받은 납입원금</th><td class="num">' + won(e.principal) + '</td></tr>';
+    html += '<tr><th>운용' + (e.profit < 0 ? '손실' : '수익') + '</th><td class="num">' + won(e.profit) + '</td></tr>';
+    html += '<tr><th>세액공제 받지 않은 납입금</th><td class="num">' + won(e.nonDeduct) + '</td></tr>';
+    html += '<tr><th>계좌 평가액</th><td class="num">' + won(e.accountValue) + '</td></tr>';
+    html += '<tr><th>과세대상 금액</th><td class="num">' + won(e.taxBase) + '</td></tr>';
+    html += '<tr><th>지금 해지 (16.5%)</th><td class="num">세금 ' + won(e.cancelTax) + ' · 실수령 ' + won(e.cancelNet) + '</td></tr>';
+    html += '<tr><th>연금수령 (' + (e.pensionRate * 100).toFixed(1) + '%' + (e.split ? ', 1,500만 원 이하 분할' : ', 한 번에') + ')</th><td class="num">세금 ' + won(e.pensionTax) + ' · 실수령 ' + won(e.pensionNet) + '</td></tr>';
+    html += '<tr><th>받은 세액공제 누계</th><td class="num">' + won(e.received) + '</td></tr>';
+    html += '</tbody></table>';
+    html += '<div class="pr-highlight">연금으로 받으면 ' + won(e.diff) + '을 덜 냅니다.<br />' +
+      '지금 해지 총손익 ' + won(e.totalNow) + ' vs 연금수령 총손익 ' + won(e.totalLater) + '</div>';
+
+    html += '<h2>4. 12월 절세 마감 체크리스트 (2026-12-31 기준)</h2>';
+    var ckDone = TAX_ITEMS.filter(function (i) { return !!taxChecks[i.id]; }).length;
+    html += '<table><thead><tr><th style="width:8%">✓</th><th style="width:18%">마감</th><th>항목</th></tr></thead><tbody>';
+    TAX_ITEMS.forEach(function (item) {
+      html += '<tr><td style="text-align:center">' + (taxChecks[item.id] ? '✔' : '') + '</td><td>' + esc(item.badge) +
+        '</td><td>' + esc(item.title) + '</td></tr>';
+    });
+    html += '</tbody></table>';
+    html += '<p class="pr-note">체크 ' + ckDone + ' / ' + TAX_ITEMS.length + ' 항목 · 12월 31일 입금분까지 2026년 귀속</p>';
+
+    html += '<p class="pr-note"><strong>기준·주의</strong><br />' +
+      '· 근거: 소득세법 제59조의3(연금계좌세액공제), 제20조의3·시행령 제40조의2(연금수령·연금소득세), 제14조 제3항 제9호·제64조의4(1,500만 원 초과), 시행령 제118조의2 제3항(ISA 60일), 근로자퇴직급여 보장법 시행령 제18조·시행규칙 제10조(IRP 중도인출·위험자산 70%).<br />' +
+      '· 연금수령 비교는 만 55세 이후·가입 5년 경과·연금수령한도 이내 요건을 충족했다고 가정한 값입니다.' + (ageText ? ' 선택 연령대: ' + esc(ageText) + '.' : '') + '<br />' +
+      '· 실제 세액공제·환급액은 결정세액, 다른 소득·공제, 기납부세액에 따라 달라집니다. IRP의 퇴직금 재원은 퇴직소득세가 별도로 적용됩니다.<br />' +
+      (e.profit < 0 ? '· 운용손실은 과세대상에서 먼저 차감되어 세금이 줄어드는 것으로 계산했습니다(시행령 제40조의3 제5항).<br />' : '') +
+      '· 이 리포트는 특정 금융상품을 권유하지 않으며, 신고·해지 전 국세청 홈택스와 금융기관 확인이 필요합니다.</p>';
+    html += '<p class="pr-foot">2026 연금저축·IRP 세액공제 &amp; 해지 손익 계산기 · 2026년 귀속 소득세법 기준 · 무료</p>';
+
+    $('printReport').innerHTML = html;
+  }
+
+  /* ───────── 이벤트 ───────── */
+  function onChange(id) {
+    if (id === 'exitReceived' && $('autoReceived').checked) {
+      // 사용자가 직접 고친 경우 자동 계산 해제
+      var principal = Math.max(0, val('exitPrincipal'));
+      var auto = Math.round(principal * readCreditState().rate);
+      if (Math.abs(val('exitReceived') - auto) > 1) $('autoReceived').checked = false;
+    }
+    renderCredit();
+  }
+
+  document.querySelectorAll('input[name="incomeType"]').forEach(function (el) {
+    el.addEventListener('change', function () {
+      var isEarned = document.querySelector('input[name="incomeType"]:checked').value === 'earned';
+      $('incomeAmountLabel').textContent = isEarned ? '총급여액' : '종합소득금액';
+      $('incomeAmount').setAttribute('aria-label', isEarned ? '총급여액' : '종합소득금액');
+      if (!isEarned) {
+        $('incomeHint').innerHTML = '= ' + wonShort(val('incomeAmount')) + ' · 사업·기타소득이 있으면 근로소득만 있는 경우와 달리 종합소득금액 4,500만 원이 경계입니다';
+      } else {
+        $('incomeHint').innerHTML = '= ' + wonShort(val('incomeAmount'));
+      }
+      renderCredit();
+    });
+  });
+
+  document.querySelectorAll('input[name="isaTarget"]').forEach(function (el) {
+    el.addEventListener('change', renderCredit);
+  });
+  $('isaWithin60').addEventListener('change', renderCredit);
+  $('printBtn').addEventListener('click', function () {
+    buildPrintReport();
+    window.print();
+  });
+  window.addEventListener('beforeprint', buildPrintReport);
+
+  var TAB_MAP = [
+    { id: "credit", tab: "tab-credit", panel: "panel-credit" },
+    { id: "exit", tab: "tab-exit", panel: "panel-exit" },
+    { id: "check", tab: "tab-check", panel: "panel-check" }
+  ];
+
+  function selectTab(id) {
+    TAB_MAP.forEach(function (t) {
+      var on = t.id === id;
+      $(t.tab).setAttribute("aria-selected", String(on));
+      $(t.panel).hidden = !on;
+    });
+    if (id === "exit") renderExit();
+    if (id === "check") renderChecklist();
+    if (history.replaceState) {
+      var hash = id === "credit" ? "" : "#" + id;
+      history.replaceState(null, "", location.pathname + location.search + hash);
+    }
+  }
+
+  TAB_MAP.forEach(function (t) {
+    $(t.tab).addEventListener("click", function () { selectTab(t.id); });
+  });
+
+  ['exitPrincipal', 'exitProfit', 'exitNonDeduct', 'exitAge', 'exitSplit', 'autoReceived'].forEach(function (id) {
+    var el = $(id);
+    if (!el) return;
+    el.addEventListener('input', function () { renderExit(); });
+    el.addEventListener('change', function () { renderExit(); });
+  });
+
+  // 직접 수정하면 자동 계산을 끄고 입력값을 그대로 씁니다.
+  $('exitReceived').addEventListener('input', function () {
+    var auto = $('autoReceived');
+    if (auto.checked) auto.checked = false;
+    renderExit();
+  });
+  $('exitReceived').addEventListener('change', function () { renderExit(); });
+  $('exitPrincipal').addEventListener('input', function () {
+    if ($('autoReceived').checked) renderExit();
+  });
+
+  // 해시로 탭 진입 지원 (#exit, #check)
+  if (location.hash === '#exit') selectTab('exit');
+  else if (location.hash === '#check') selectTab('check');
+
+  loadTaxChecks();
+  renderCredit();
+  renderExit();
+  renderChecklist();
+
+  // 검증용 (테스트 스크립트에서 사용)
+  window.__pt = {
+    computeCredit: computeCredit,
+    computeReverse: computeReverse,
+    computeExit: computeExit,
+    readCreditState: readCreditState,
+    buildPrintReport: buildPrintReport,
+    renderChecklist: renderChecklist,
+    selectTab: selectTab,
+    TAX_ITEMS: TAX_ITEMS,
+    LIM: LIM,
+    version: '2026.2'
+  };
+})();
+</script>
+</body>
+</html>
