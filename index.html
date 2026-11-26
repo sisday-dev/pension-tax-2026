@@ -26,15 +26,9 @@
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231257a5'/%3E%3Ctext x='50' y='72' font-size='46' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3E%EC%97%B0%3C/text%3E%3C/svg%3E" />
 
-  <!-- Google Analytics 4 — 도메인 확정 후 측정 ID를 넣고 주석을 해제합니다.
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
+  <!-- Google Analytics 4 — 아직 이 사이트 전용 GA4 속성(측정 ID)이 없습니다.
+       발급받으면 이 파일 하단 스크립트의 SITE_CONFIG.ga4에 "G-..." 를 넣으세요.
+       값이 비어 있으면 gtag를 불러오지 않고 클릭 추적도 조용히 건너뜁니다. -->
 
   <!-- Google AdSense (게시자 ID: ca-pub-6878215996562815) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6878215996562815" crossorigin="anonymous"></script>
@@ -82,7 +76,7 @@
       {
         "@type": "Question",
         "name": "중도해지하면 세금을 얼마나 내나요?",
-        "acceptedAnswer": { "@type": "Answer", "text": "연금수령 요건(만 55세 이후·가입 5년 경과·연금수령한도 이내)을 채우지 못하고 해지하면 세액공제 받은 납입원금과 운용수익에 기타소득세 16.5%(소득세 15% + 지방소득세 1.5%)가 부과됩니다. 세액공제를 받지 않은 납입금은 과세되지 않습니다." }
+        "acceptedAnswer": { "@type": "Answer", "text": "연금수령 요건(만 55세 이후·가입 5년 경과·연금수령한도 이내)을 채우지 못하고 해지하면 세액공제 받은 납입원금과 운용수익에 기타소득세 16.5%(소득세 15% + 지방소득세 1.5%)가 부과됩니다. 운용손실이 나 평가액이 원금보다 적으면 그 손실만큼이 과세대상에서 먼저 차감되어 세금이 줄어듭니다(소득세법 시행령 제40조의3 제5항). 세액공제를 받지 않은 납입금은 과세되지 않습니다." }
       },
       {
         "@type": "Question",
@@ -777,8 +771,9 @@
 
       <div class="kv" style="margin-top:14px;">
         <div class="kv-row"><span class="k">받은 세액공제 누계</span><span class="v" id="outReceived">2,970,000원</span></div>
-        <div class="kv-row"><span class="k">지금 해지 시 총손익 (공제 − 해지세)</span><span class="v" id="outTotalNow">-660,000원</span></div>
-        <div class="kv-row"><span class="k">연금수령 시 총손익 (공제 − 연금세)</span><span class="v" id="outTotalLater">1,760,000원</span></div>
+        <div class="kv-row"><span class="k">운용손익 (평가액 − 납입원금)</span><span class="v" id="outProfit">+4,000,000원</span></div>
+        <div class="kv-row"><span class="k">지금 해지 시 총손익 (공제 + 운용손익 − 해지세)</span><span class="v" id="outTotalNow">+3,340,000원</span></div>
+        <div class="kv-row"><span class="k">연금수령 시 총손익 (공제 + 운용손익 − 연금세)</span><span class="v" id="outTotalLater">+5,760,000원</span></div>
         <div class="kv-row total"><span class="k">연금수령 시 아끼는 세금(절세액)</span><span class="v" id="outDiff">2,420,000원</span></div>
       </div>
 
@@ -871,8 +866,8 @@
         <li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239025" target="_blank" rel="noopener">국세청 월세액 세액공제 안내</a> — 총급여 8,000만 원 이하, 월세 1,000만 원 한도, 17%/15%</li>
         <li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=239040" target="_blank" rel="noopener">국세청 기부금 세액공제 안내</a> — 1,000만 원 이하 15%, 초과 30%, 고향사랑기부금 100/110</li>
         <li><a href="https://www.hometax.go.kr/" target="_blank" rel="noopener">국세청 홈택스</a> — 연말정산 미리보기, 간소화 서비스</li>
-        <li><a href="https://100lifeplan.fss.or.kr/" target="_blank" rel="noopener">금융감독원 통합연금포털</a> — 연금저축·IRP 납입한도와 수수료</li>
-        <li><a href="https://isa.kofia.or.kr/" target="_blank" rel="noopener">금융투자협회 ISA 다모아</a> — ISA 의무가입 3년, 만기 후 60일 내 연금계좌 전환</li>
+        <li><a href="https://www.fss.or.kr/fss/lifeplan/lifeplanIndex/index.do?menuNo=201101" target="_blank" rel="noopener">금융감독원 통합연금포털</a> — 연금저축·IRP 납입한도와 수수료</li>
+        <li><a href="http://isa.kofia.or.kr/" target="_blank" rel="noopener">금융투자협회 ISA 다모아</a> — ISA 의무가입 3년, 만기 후 60일 내 연금계좌 전환</li>
         <li><a href="https://yumam.kbiz.or.kr/" target="_blank" rel="noopener">중소기업중앙회 노란우산공제</a> — 소득공제 한도(사업소득 4천 이하 600만 원 등)</li>
         <li>소득세법 제59조의3·제59조의4, 조세특례제한법 제86조의3·제58조 — 국가법령정보센터(law.go.kr)</li>
       </ul>
@@ -903,7 +898,7 @@
     <p class="sub">계산기를 쓰기 전에 이 다섯 개만 확인하세요.</p>
     <ol class="tips">
       <li><strong>연금저축에 900만 원 몰아넣기</strong>연금저축 단독 한도는 600만 원입니다. 900만 원을 넣어도 300만 원은 공제되지 않아요. 남은 300만 원은 IRP에 넣어야 합니다.</li>
-      <li><strong>“원금만 빼면 세금 없지?”</strong>세액공제 받은 원금과 운용수익은 해지 시 전액 16.5% 과세 대상입니다. 세금 없이 나가는 건 공제받지 않은 초과 납입금뿐이에요.</li>
+      <li><strong>“원금만 빼면 세금 없지?”</strong>세액공제 받은 원금과 운용수익은 해지 시 16.5% 과세 대상입니다(운용손실이 있으면 그 손실만큼 과세대상이 먼저 줄어듭니다). 세금 없이 나가는 건 공제받지 않은 초과 납입금뿐이에요.</li>
       <li><strong>납입한도 1,800만 원과 공제한도 900만 원 혼동</strong>연금계좌에는 전 금융기관 합산 연 1,800만 원까지 넣을 수 있지만, 세액공제는 900만 원(ISA 전환 시 1,200만 원)까지입니다.</li>
       <li><strong>IRP에서 일부만 빼려는 시도</strong>연금저축은 세금을 내고 일부 인출이 되지만, IRP는 법정 사유가 아니면 계좌를 해지해야 합니다. 그마저 퇴직금 재원과 개인 납입분이 섞여 있으면 세금 계산이 따로입니다.</li>
       <li><strong>결정세액이 0원인데 한도 채우기</strong>세액공제는 낼 세금을 깎는 제도입니다. 다른 공제로 이미 낼 세금이 없으면 계산만큼 환급되지 않습니다. 공제 못 받은 납입금은 다음 해로 이월 신청이 가능하니 금융사에 문의하세요.</li>
@@ -928,7 +923,7 @@
     </details>
     <details>
       <summary>중도해지 세금은 어떻게 계산되나요?</summary>
-      <div class="answer">세액공제 받은 납입원금과 운용수익을 더한 금액에 16.5%(소득세 15% + 지방소득세 1.5%)를 곱합니다. 운용손실이 나도 세금은 원금 기준으로 계산되고 손실을 세금에서 빼 주지는 않습니다. 해지하는 해에 넣은 금액은 세액공제도 받지 못합니다.</div>
+      <div class="answer">세액공제 받은 납입원금과 운용수익을 더한 금액에 16.5%(소득세 15% + 지방소득세 1.5%)를 곱합니다. 다만 운용손실이 나 평가액이 원금보다 적으면, 그 손실만큼이 인출 순서와 반대로 과세대상(운용수익 → 공제받은 원금)에서 먼저 차감되어 과세대상이 줄고 해지세도 줄어듭니다(소득세법 시행령 제40조의3 제5항). 다만 손실 자체를 세금에서 돌려받거나 현금으로 메워 주지는 않습니다. 해지하는 해에 넣은 금액은 세액공제도 받지 못합니다.</div>
     </details>
     <details>
       <summary>55세가 안 됐는데 병원비로 급히 꺼내야 합니다.</summary>
@@ -999,6 +994,47 @@
 (function () {
   "use strict";
 
+  /* ══════════ 분석(GA4) 설정 ══════════
+     이 사이트 전용 GA4 속성 측정 ID가 발급되면 SITE_CONFIG.ga4 에 넣습니다.
+     비어 있으면 외부 스크립트를 부르지 않고, 클릭 추적은 아무 것도 하지 않습니다. */
+  var SITE_CONFIG = {
+    site: "pension-tax-2026",
+    ga4: "",
+    utmCampaign: "own_site_link"
+  };
+
+  function initAnalytics() {
+    if (!SITE_CONFIG.ga4) return;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(SITE_CONFIG.ga4);
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", SITE_CONFIG.ga4, { anonymize_ip: true });
+  }
+
+  function trackEvent(name, params) {
+    if (!window.dataLayer) return;  // 측정 ID가 없으면 쌓지 않습니다
+    var payload = { event: name, site: SITE_CONFIG.site };
+    if (params) for (var k in params) if (Object.prototype.hasOwnProperty.call(params, k)) payload[k] = params[k];
+    window.dataLayer.push(payload);
+  }
+
+  function withUtm(url, content) {
+    if (!url || url === "#") return url;
+    try {
+      var u = new URL(url, location.href);
+      if (u.hostname === location.hostname) return url;  // 같은 사이트 내부 링크는 그대로
+      u.searchParams.set("utm_source", SITE_CONFIG.site);
+      u.searchParams.set("utm_medium", "referral");
+      u.searchParams.set("utm_campaign", SITE_CONFIG.utmCampaign);
+      if (content) u.searchParams.set("utm_content", content);
+      return u.toString();
+    } catch (e) { return url; }
+  }
+
   /* ───────── 상수 ───────── */
   var LIM = {
     PENSION_CAP: 6000000,   // 연금저축 단독 한도
@@ -1031,6 +1067,9 @@
   }
   function money(n) {
     return Math.round(n).toLocaleString('ko-KR');
+  }
+  function plusWon(n) {
+    return (n > 0 ? '+' : '') + won(n);
   }
 
   /* ───────── 금액 입력 포맷 ───────── */
@@ -1243,8 +1282,12 @@
       pensionNet: pensionNet,
       diff: diff,
       received: received,
-      totalNow: received - cancelTax,
-      totalLater: received - pensionTax,
+      // 총손익은 ‘세금만’이 아니라 운용손익까지 포함한 실제 손익이다.
+      //   받은 세액공제 + 운용손익 − 세금 = (내가 넣은 돈 대비 돌려받는 돈)
+      totalNow: received - cancelTax + profit,
+      totalLater: received - pensionTax + profit,
+      taxOnlyNow: received - cancelTax,
+      taxOnlyLater: received - pensionTax,
       pensionRate: s.pensionRate,
       split: splitNote,
       loss: profit < 0
@@ -1417,8 +1460,9 @@
     $('laterBase').textContent = won(e.taxBase);
 
     $('outReceived').textContent = won(e.received);
-    $('outTotalNow').textContent = won(e.totalNow);
-    $('outTotalLater').textContent = won(e.totalLater);
+    $('outProfit').textContent = plusWon(e.profit);
+    $('outTotalNow').textContent = plusWon(e.totalNow);
+    $('outTotalLater').textContent = plusWon(e.totalLater);
     $('outDiff').textContent = won(e.diff);
 
     var verdict = $('exitVerdict');
@@ -1435,16 +1479,13 @@
 
     var notes = [];
     if (e.loss) {
-      notes.push('운용손실 ' + won(Math.abs(e.profit)) + '은 과세대상(공제받은 원금·운용수익)에서 먼저 차감되어 세금이 줄어듭니다(소득세법 시행령 §40조의3 ⑤). 다만 손실 자체를 돌려받지는 못합니다.');
+      notes.push('운용손실 ' + won(Math.abs(e.profit)) + '은 과세대상(공제받은 원금·운용수익)에서 먼저 차감되어 해지세가 줄어듭니다(소득세법 시행령 제40조의3 ⑤). 다만 손실 자체를 돌려받지는 못합니다.');
     }
     if (!e.split && e.taxBase > LIM.ANNUAL_PENSION_LINE) {
       notes.push('한 번에 받으면 연 1,500만 원을 넘는 ' + won(e.taxBase - LIM.ANNUAL_PENSION_LINE) + '에 16.5%가 적용됩니다. 나눠 받으면 3.3~5.5%로 낮아질 수 있어요.');
     }
-    if (e.received > e.cancelTax) {
-      notes.push('지금 해지해도 받은 세액공제 ' + won(e.received) + '가 해지세 ' + won(e.cancelTax) + '보다 커서, 총손익은 +' + won(e.totalNow) + '입니다. 다만 운용수익이 커질수록 이 차이는 줄어듭니다.');
-    } else {
-      notes.push('지금 해지하면 받은 세액공제 ' + won(e.received) + '보다 해지세 ' + won(e.cancelTax) + '가 커서 총손익이 ' + won(e.totalNow) + '입니다.');
-    }
+    notes.push('지금 해지 총손익 ' + plusWon(e.totalNow) + ' = 받은 세액공제 ' + won(e.received) + ' + 운용손익 ' + plusWon(e.profit) + ' − 해지세 ' + won(e.cancelTax) + '입니다. 운용손익을 뺀 세금만 보면 ' + plusWon(e.taxOnlyNow) + '입니다.');
+    notes.push('연금수령 총손익 ' + plusWon(e.totalLater) + ' = 받은 세액공제 ' + won(e.received) + ' + 운용손익 ' + plusWon(e.profit) + ' − 연금소득세 ' + won(e.pensionTax) + '입니다.');
     var notice = $('exitNotice');
     if (notes.length) {
       notice.hidden = false;
@@ -1469,7 +1510,7 @@
       title: "ISA 만기 자금을 연금계좌로 전환",
       desc: "ISA 의무가입 3년이 지나 만기 해지했다면, 60일 이내에 연금저축·IRP로 옮겨야 추가 한도가 생깁니다. 올해 한도에 더하려면 12월 31일까지 입금해야 합니다.",
       effect: "전환금액의 10%, 최대 <strong>300만 원</strong> 추가 한도 → 16.5% 기준 <strong>49만 5천 원</strong> 더 환급.",
-      src: { label: "금융투자협회 ISA 다모아", url: "https://isa.kofia.or.kr/" },
+      src: { label: "금융투자협회 ISA 다모아", url: "http://isa.kofia.or.kr/" },
       calc: true
     },
     {
@@ -1533,7 +1574,7 @@
       title: "연금계좌 납입증명서 발급",
       desc: "연금저축·IRP 납입액은 간소화 서비스에 대부분 잡히지만, 누락되면 금융사 앱에서 납입증명서를 발급해 회사에 제출합니다.",
       effect: "납입증명서가 없으면 세액공제가 <strong>반영되지 않을 수</strong> 있습니다.",
-      src: { label: "금융감독원 통합연금포털", url: "https://100lifeplan.fss.or.kr/" },
+      src: { label: "금융감독원 통합연금포털", url: "https://www.fss.or.kr/fss/lifeplan/lifeplanIndex/index.do?menuNo=201101" },
       calc: false
     },
     {
@@ -1703,7 +1744,7 @@
     html += '<tr><th>받은 세액공제 누계</th><td class="num">' + won(e.received) + '</td></tr>';
     html += '</tbody></table>';
     html += '<div class="pr-highlight">연금으로 받으면 ' + won(e.diff) + '을 덜 냅니다.<br />' +
-      '지금 해지 총손익 ' + won(e.totalNow) + ' vs 연금수령 총손익 ' + won(e.totalLater) + '</div>';
+      '지금 해지 총손익 ' + plusWon(e.totalNow) + ' vs 연금수령 총손익 ' + plusWon(e.totalLater) + ' (운용손익 ' + plusWon(e.profit) + ' 포함)</div>';
 
     html += '<h2>4. 12월 절세 마감 체크리스트 (2026-12-31 기준)</h2>';
     var ckDone = TAX_ITEMS.filter(function (i) { return !!taxChecks[i.id]; }).length;
@@ -1811,6 +1852,21 @@
   renderCredit();
   renderExit();
   renderChecklist();
+  initAnalytics();
+  setupOutboundTracking();
+
+  /* ───────── 바깥 링크: UTM 부착 + 클릭 기록 ───────── */
+  function setupOutboundTracking() {
+    var links = document.querySelectorAll('.site-footer .links a');
+    Array.prototype.forEach.call(links, function (a) {
+      var href = a.getAttribute('href') || '';
+      var tagged = withUtm(href, 'footer');
+      if (tagged !== href) a.setAttribute('href', tagged);
+      a.addEventListener('click', function () {
+        trackEvent('outbound_click', { link_text: (a.textContent || '').trim(), link_url: a.getAttribute('href') || '' });
+      });
+    });
+  }
 
   // 검증용 (테스트 스크립트에서 사용)
   window.__pt = {
@@ -1823,7 +1879,10 @@
     selectTab: selectTab,
     TAX_ITEMS: TAX_ITEMS,
     LIM: LIM,
-    version: '2026.2'
+    SITE_CONFIG: SITE_CONFIG,
+    withUtm: withUtm,
+    trackEvent: trackEvent,
+    version: '2026.3'
   };
 })();
 </script>
